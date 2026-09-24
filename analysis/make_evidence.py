@@ -21,8 +21,8 @@ OUT.mkdir(parents=True, exist_ok=True)
 EXCLUDE = "t1_mom_character - v3"
 
 plt.rcParams.update({"font.family": "Malgun Gothic", "axes.unicode_minus": False})
-INK, INK2, MUTED, LINE = "#1a1a1a", "#4f5250", "#8b8f8c", "#e4e6e3"
-SAGE, SAGE_D, SAGE_LL, BAD, GREY = "#7a9a7c", "#5b7a5e", "#f1f5ef", "#c0564b", "#b8c9b8"
+INK, INK2, MUTED, LINE = "#111111", "#444444", "#8a8a8a", "#e5e5e5"
+ACCENT, ACCENT_D, ACCENT_LL, BAD, GREY = "#ff6900", "#c24e00", "#fff5ec", "#5c5c5c", "#d4d4d4"
 
 NUM = ["지출 금액 (KRW)", "링크 클릭", "노출", "클릭(전체)", "ThruPlay"]
 raw = pd.read_excel(ROOT / "달칩-메타-광고-데이터_성별-연령버전.xlsx")
@@ -62,13 +62,13 @@ def draw_table(ax, cols, rows, widths, hl_rows=(), align=None):
     for w in widths:
         xs.append(x)
         x += w
-    ax.add_patch(plt.Rectangle((0, 1 - h), 1, h, color=SAGE_LL, transform=ax.transAxes, lw=0))
+    ax.add_patch(plt.Rectangle((0, 1 - h), 1, h, color=ACCENT_LL, transform=ax.transAxes, lw=0))
     for j, c in enumerate(cols):
         ax.text(xs[j] + 0.01, 1 - h / 2, c, fontsize=10, fontweight="bold", color=INK2, va="center", transform=ax.transAxes)
     for i, r in enumerate(rows):
         y = 1 - h * (i + 1.5)
         if i in hl_rows:
-            ax.add_patch(plt.Rectangle((0, 1 - h * (i + 2)), 1, h, color="#e9f2e6", transform=ax.transAxes, lw=0))
+            ax.add_patch(plt.Rectangle((0, 1 - h * (i + 2)), 1, h, color="#ffebdd", transform=ax.transAxes, lw=0))
         ax.plot([0, 1], [1 - h * (i + 2)] * 2, color=LINE, lw=0.8, transform=ax.transAxes)
         for j, v in enumerate(r):
             right = align and align[j] == "r"
@@ -135,7 +135,7 @@ fem = gender.get("female", 0) / gender.sum() * 100
 fig = plt.figure(figsize=(12, 5.6), dpi=150, facecolor="white")
 header(fig, "성별 · 연령별 반응 · 원본 엑셀 재집계", "아이엄마 타깃 세트 · 2주 합산 · 링크 클릭 기준")
 ax = fig.add_axes([0.07, 0.12, 0.52, 0.62])
-colors = [SAGE if a in ("55-64", "65+") else GREY for a in age.index]
+colors = [ACCENT if a in ("55-64", "65+") else GREY for a in age.index]
 bars = ax.bar(age.index, age.ctr, color=colors, width=0.62)
 for b, v in zip(bars, age.ctr):
     ax.text(b.get_x() + b.get_width() / 2, v + 0.08, f"{v:.2f}%", ha="center", fontsize=11, fontweight="bold", color=INK)
@@ -153,10 +153,10 @@ old_ctr = old["링크 클릭"].sum() / old["노출"].sum() * 100
 young_ctr = young["링크 클릭"].sum() / young["노출"].sum() * 100
 old_share = old["링크 클릭"].sum() / t1["링크 클릭"].sum() * 100
 fig.text(0.65, 0.74, "여성 비중", fontsize=12, color=INK2)
-fig.text(0.65, 0.62, f"{fem:.0f}%", fontsize=34, fontweight="bold", color=SAGE_D)
+fig.text(0.65, 0.62, f"{fem:.0f}%", fontsize=34, fontweight="bold", color=ACCENT_D)
 fig.text(0.65, 0.57, f"링크 클릭 {gender.sum():,.0f}건 중 {gender.get('female', 0):,.0f}건", fontsize=10.5, color=MUTED)
 fig.text(0.65, 0.44, "55세 이상 vs 25~54세 링크 CTR", fontsize=12, color=INK2)
-fig.text(0.65, 0.32, f"{old_ctr:.2f}% vs {young_ctr:.2f}%", fontsize=26, fontweight="bold", color=SAGE_D)
+fig.text(0.65, 0.32, f"{old_ctr:.2f}% vs {young_ctr:.2f}%", fontsize=26, fontweight="bold", color=ACCENT_D)
 fig.text(0.65, 0.27, f"55세 이상이 링크 클릭의 {old_share:.0f}%", fontsize=10.5, color=MUTED)
 footer(fig, "출처: 달칩-메타-광고-데이터_성별-연령버전.xlsx · 성별 unknown 포함 · 연령 Unknown 1행 제외")
 fig.savefig(OUT / "ev_age_gender.png", facecolor="white")
@@ -172,7 +172,7 @@ reels = pl[[i for i in pl.index if "릴스" in i[1]]].sum()
 fig = plt.figure(figsize=(12, 5.6), dpi=150, facecolor="white")
 header(fig, "지면별 링크 클릭 · 원본 엑셀 재집계", f"아이엄마 타깃 세트 · 2주차(7/25–7/31) · 링크 클릭 {pl.sum():,.0f}건 · 자동 배치")
 ax = fig.add_axes([0.2, 0.14, 0.5, 0.68])
-cols_ = [SAGE if "릴스" in p else GREY for _, p in pl.index]
+cols_ = [ACCENT if "릴스" in p else GREY for _, p in pl.index]
 bars = ax.barh(labels, pl.values, color=cols_, height=0.62)
 for b, v in zip(bars, pl.values):
     ax.text(v + 12, b.get_y() + b.get_height() / 2, f"{v:,.0f}", va="center", fontsize=10.5, fontweight="bold", color=INK)
@@ -182,7 +182,7 @@ ax.spines["left"].set_color(LINE)
 ax.set_xticks([])
 ax.tick_params(colors=INK2, labelsize=10.5)
 fig.text(0.76, 0.66, "릴스 비중", fontsize=12, color=INK2)
-fig.text(0.76, 0.54, f"{reels / pl.sum() * 100:.0f}%", fontsize=34, fontweight="bold", color=SAGE_D)
+fig.text(0.76, 0.54, f"{reels / pl.sum() * 100:.0f}%", fontsize=34, fontweight="bold", color=ACCENT_D)
 fig.text(0.76, 0.49, f"{pl.sum():,.0f}건 중 {reels:,.0f}건", fontsize=10.5, color=MUTED)
 footer(fig, "출처: 2주차-영상-참여-지표.xlsx (아웃바운드 클릭 = 아마존 상품 페이지로 이동한 클릭) · 지면별 지출이 없어 비용 효율은 비교하지 않음")
 fig.savefig(OUT / "ev_placement.png", facecolor="white")
@@ -202,7 +202,7 @@ ax = fig.add_axes([0.06, 0.14, 0.58, 0.64])
 xs = range(len(metrics))
 orig = [w.loc["t1_mom_character", c] / w.loc["t1_mom_character", "동영상 재생"] * 100 for _, c in metrics]
 v2 = [w.loc["t1_mom_character_v2", c] / w.loc["t1_mom_character_v2", "동영상 재생"] * 100 for _, c in metrics]
-b1 = ax.bar([x - 0.19 for x in xs], orig, width=0.36, color=SAGE, label="원본 (채택)")
+b1 = ax.bar([x - 0.19 for x in xs], orig, width=0.36, color=ACCENT, label="원본 (채택)")
 b2 = ax.bar([x + 0.19 for x in xs], v2, width=0.36, color=GREY, label="보완판")
 for bars in (b1, b2):
     for b in bars:
@@ -217,7 +217,7 @@ ax.tick_params(colors=INK2)
 ax.legend(frameon=False, loc="upper left")
 ax.set_title("시청 지표 · 보완판이 이탈을 줄임", loc="left", fontsize=12, color=INK, pad=10)
 fig.text(0.7, 0.72, "목표 지표 · 링크 CTR", fontsize=12, color=INK2)
-fig.text(0.7, 0.6, f"{ctr2['t1_mom_character']:.2f}%", fontsize=30, fontweight="bold", color=SAGE_D)
+fig.text(0.7, 0.6, f"{ctr2['t1_mom_character']:.2f}%", fontsize=30, fontweight="bold", color=ACCENT_D)
 fig.text(0.86, 0.615, "원본", fontsize=11, color=MUTED)
 fig.text(0.7, 0.48, f"{ctr2['t1_mom_character_v2']:.2f}%", fontsize=30, fontweight="bold", color=BAD)
 fig.text(0.86, 0.495, "보완판", fontsize=11, color=MUTED)
