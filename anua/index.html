@@ -53,7 +53,9 @@ section{position:relative;padding:120px 0}
 #cover h1{font-size:clamp(64px,13vw,168px);font-weight:800;letter-spacing:-.01em;line-height:1;margin:0 0 30px}
 #cover .tagline{font-size:clamp(18px,2.4vw,28px);font-weight:500;letter-spacing:.06em;margin:0 0 12px}
 #cover .tagline b{color:var(--accent);font-weight:700}
-#cover .meta{font-size:14px;color:var(--muted);letter-spacing:.04em}
+#cover .meta{font-size:14px;color:var(--muted);letter-spacing:.04em;margin:0 0 6px}
+#cover .cover-name{font-size:17px;font-weight:600;margin:22px 0 10px}
+#cover .cover-name b{letter-spacing:.06em;margin-left:6px}
 .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:var(--muted)}
 
 /* about */
@@ -67,6 +69,7 @@ section{position:relative;padding:120px 0}
 .about-head{border-left:2px solid var(--accent);padding-left:28px;margin-bottom:40px}
 .about-head h2{font-size:clamp(44px,5.4vw,72px);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:0 0 14px}
 .about-head p{font-size:19px;font-weight:600;margin:0}
+.about-head .about-desc{font-size:15.5px;font-weight:400;color:var(--ink2);margin-top:14px;max-width:640px}
 .about-cols{display:grid;grid-template-columns:1fr 1fr;gap:34px 48px}
 .blk h4{font-size:19px;font-weight:700;margin:0 0 14px;padding-bottom:10px;position:relative}
 .blk h4::after{content:"";position:absolute;left:0;bottom:0;width:72px;height:2px;background:var(--accent)}
@@ -159,6 +162,14 @@ section{position:relative;padding:120px 0}
 .shot img{border:1px solid var(--line);border-radius:10px;background:#fff}
 .shot figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 
+.study-step{margin-top:64px}
+.story{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.frame{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;min-height:200px;display:flex;flex-direction:column}
+.frame .t{font-size:13px;font-weight:700;color:var(--accent-d);letter-spacing:.06em}
+.frame b{font-size:18px;margin:6px 0 10px}
+.frame p{font-size:15px;color:var(--ink2);margin:0}
+@media (max-width:720px){.story{grid-template-columns:1fr}.frame{aspect-ratio:auto}}
+
 /* result */
 .boxes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
@@ -238,7 +249,7 @@ section{position:relative;padding:120px 0}
 
 /* thanks */
 #thanks{text-align:center;padding:160px 0 140px}
-#thanks .small{font-size:22px;letter-spacing:.3em;color:var(--ink2);margin-bottom:14px;padding-bottom:14px;display:inline-block;border-bottom:1px solid var(--line)}
+#thanks .small{font-size:15px;letter-spacing:.14em;color:var(--ink2);margin-bottom:14px;padding-bottom:14px;display:inline-block;border-bottom:1px solid var(--line)}
 #thanks h2{font-size:clamp(60px,10vw,120px);font-weight:800;letter-spacing:-.02em;margin:0;position:relative;display:inline-block}
 #thanks h2 em{position:absolute;left:-18%;top:-34%;font-family:"Brush Script MT","Segoe Script",cursive;font-weight:400;font-style:normal;font-size:.62em;color:var(--accent);transform:rotate(-8deg)}
 #thanks .contact{margin-top:30px;font-weight:600}
@@ -293,6 +304,7 @@ section{position:relative;padding:120px 0}
       <a href="#about">About</a>
       <a href="#dalchip">Main Project</a>
       <a href="#evidence">Data</a>
+      <a href="#anua">ANUA Study</a>
       <a href="#b2b">B2B Content</a>
       <a href="#more">Content</a>
       <a href="#next">Next</a>
@@ -305,8 +317,10 @@ section{position:relative;padding:120px 0}
 <section id="cover" class="glow">
   <div class="wrap">
     <h1>PORTFOLIO</h1>
-    <p class="tagline">가설로 숏폼을 만들고,<br>숫자로 다시 설계하는 콘텐츠 기획자 <b>송보경</b>입니다.</p>
-    <p class="meta">ANUA · Global Content Marketing · 2026.10</p>
+    <p class="tagline">콘텐츠로 반응을 만들고,<br>데이터로 성과를 증명합니다.</p>
+    <p class="cover-name">송보경 <b>BOKYUNG SONG</b></p>
+    <p class="meta">Consumer Insight · Creative Strategy · Data-driven Optimization</p>
+    <p class="meta">ANUA Global Content Marketing 지원 포트폴리오 · 2026.10</p>
   </div>
   <div class="scroll-cue">SCROLL</div>
 </section>
@@ -324,7 +338,8 @@ section{position:relative;padding:120px 0}
     <div>
       <div class="about-head rv">
         <h2>About <span class="accent">me</span></h2>
-        <p>가설을 세우고, 직접 만들고, 숫자를 보고, 다시 바꿉니다.</p>
+        <p>콘텐츠로 소비자의 반응을 만들고, 데이터로 다음 전략을 설계하는 마케터 송보경입니다.</p>
+        <p class="about-desc">글로벌 시장과 소비자 데이터를 바탕으로 타깃을 정의하고, 인사이트를 콘텐츠 콘셉트로 구체화해 왔습니다. 직접 기획·제작한 광고 소재를 집행하고 성과를 분석하며, 데이터에 근거해 콘텐츠와 예산을 개선한 경험이 있습니다. 글로벌 타깃 콘텐츠 운영 경험을 바탕으로 소비자의 관심을 브랜드에 대한 관심과 구매 행동으로 연결하는 콘텐츠 마케터로 성장하고자 합니다.</p>
       </div>
       <div class="about-cols rv">
         <div class="blk">
@@ -383,7 +398,7 @@ section{position:relative;padding:120px 0}
 <section id="dalchip" class="glow">
   <div class="wrap intro-grid">
     <div class="rv">
-      <div class="eyebrow">Main Project · 실제 집행</div>
+      <div class="eyebrow">Project 1 · Main · 실제 집행</div>
       <h2 class="sec-title">가설을 세우고,<br>직접 만들고,<br>숫자로 다시 바꿨습니다</h2>
       <p class="sec-sub">네이처오다 달칩샌드 일본 진출 · 제1기 KITA 글로벌마케팅마스터 마케팅 프로젝트 최우수상</p>
       <div class="tags">
@@ -582,11 +597,74 @@ section{position:relative;padding:120px 0}
   </div>
 </section>
 
+<!-- ANUA STUDY -->
+<section id="anua" class="glow">
+  <div class="wrap">
+    <div class="eyebrow rv">Project 2 · New · Personal Case Study</div>
+    <h2 class="sec-title rv">What Makes Content Convert?</h2>
+    <p class="sec-sub rv">ANUA 글로벌 숏폼 콘텐츠 분석 및 기획 제안</p>
+    <p class="lead rv" style="max-width:760px">목적: 글로벌 소비자 관점에서 제품 소구점을 발굴하고, 콘텐츠 가설과 검증 계획을 설계합니다. 실제 집행 결과가 아닌 개인 기획안이며, 아래 가설은 콘텐츠 조사 전 단계의 가설입니다.</p>
+
+    <div class="study-step rv">
+      <div class="eyebrow">1 · Content Insight</div>
+      <h3 class="h3">무엇이 소비자의 관심을 끄는가?</h3>
+      <div class="steps" style="margin-top:0">
+        <div class="step"><div class="k">첫 3초</div><h5>제품이 필요한 이유를 전달하는가</h5><p>첫 장면에서 고민이나 질문이 먼저 나오는지, 제품이 먼저 나오는지 확인합니다.</p></div>
+        <div class="step"><div class="k">메시지</div><h5>성분 설명인가, 실제 사용 경험인가</h5><p>같은 제품이라도 어떤 요소를 앞세우는지에 따라 반응이 달라지는지 봅니다.</p></div>
+        <div class="step"><div class="k">장면</div><h5>사용 장면·텍스처·루틴·설명의 역할</h5><p>크리에이터의 설명과 실제 사용 장면이 각각 어떤 역할을 하는지 나눠 봅니다.</p></div>
+        <div class="step"><div class="k">댓글</div><h5>반복되는 질문과 구매 장벽</h5><p>댓글에서 되풀이되는 질문을 모아, 다음 콘텐츠가 먼저 답해야 할 내용을 찾습니다.</p></div>
+      </div>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">2 · Creative Hypothesis</div>
+      <h3 class="h3">제품 설명보다 소비자의 사용 맥락을 보여주면 어떨까?</h3>
+      <p class="quote" style="margin-top:0"><b>가설 (조사 전)</b> 제품의 특징을 나열하는 영상과 실제 스킨케어 루틴 안에서 제품을 사용하는 영상을 비교하면, 후자가 시청 유지율과 제품 관심을 더 높일 것이다.</p>
+      <p class="note">이 가설은 달칩샌드 경험에서 출발했습니다. 제품과 키워드를 앞으로 당긴 보완판보다 원본의 서사가 클릭을 더 만들었기 때문에, 정보 나열보다 맥락이 반응으로 이어지는지 뷰티 숏폼에서 다시 확인하려 합니다. 실제 콘텐츠를 조사한 뒤 가설을 확정합니다.</p>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">3 · Short-form Concept</div>
+      <h3 class="h3">A Product That Fits Your Routine</h3>
+      <div class="story">
+        <div class="frame"><div class="t">0–3초</div><b>Hook</b><p>타깃 소비자가 공감할 스킨케어 고민 또는 질문으로 시작</p></div>
+        <div class="frame"><div class="t">3–10초</div><b>Product Experience</b><p>제품의 실제 사용감과 루틴 속 활용 장면을 보여줌</p></div>
+        <div class="frame"><div class="t">10–20초</div><b>Reason to Believe</b><p>공식 제품 정보에 근거해 핵심 특징을 전달하고 제품 페이지로 유도</p></div>
+      </div>
+      <p class="note">기획 예시입니다. 제품의 효능이나 사용 결과를 임의로 주장하지 않고, 근거는 공식 제품 정보만 사용합니다.</p>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">4 · Test &amp; Optimize</div>
+      <h3 class="h3">성과를 어떻게 검증할 것인가?</h3>
+      <div class="read-head c2"><span>테스트 항목</span><span>확인 지표</span></div>
+      <div class="read c2">
+        <div class="read-row"><div class="num"><b>첫 장면·후킹 문구</b></div><div>초반 이탈, 시청 유지율</div></div>
+        <div class="read-row"><div class="num"><b>사용 장면·메시지</b></div><div>평균 시청 시간, 참여율</div></div>
+        <div class="read-row"><div class="num"><b>CTA·제품 연결</b></div><div>링크 클릭률, 제품 페이지 유입</div></div>
+        <div class="read-row"><div class="num"><b>구매 유도 성과</b></div><div>추적 가능한 경우 전환율·구매 성과</div></div>
+      </div>
+      <p class="quote">플랫폼과 캠페인 목표에 따라 지표를 고르고, 조회수와 구매 성과를 혼동하지 않습니다. 달칩샌드 보완판은 시청이 약 3배 늘었지만 링크 CTR은 절반으로 떨어졌습니다.</p>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">Creator Fit · 선정 기준(안)</div>
+      <h3 class="h3">크리에이터는 팔로워 수만으로 고르지 않습니다</h3>
+      <div class="steps" style="margin-top:0">
+        <div class="step"><div class="k">01</div><h5>타깃 국가</h5><p>캠페인 국가의 시청자가 실제로 모여 있는 채널인지</p></div>
+        <div class="step"><div class="k">02</div><h5>콘텐츠 스타일</h5><p>루틴·리뷰·튜토리얼 등 기획한 콘셉트와 맞는 화법인지</p></div>
+        <div class="step"><div class="k">03</div><h5>카테고리 적합성</h5><p>스킨케어 콘텐츠를 꾸준히 다뤄 왔는지</p></div>
+        <div class="step"><div class="k">04</div><h5>실제 참여 반응</h5><p>조회수보다 댓글에서 제품 질문이 나오는지</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- B2B -->
 <section id="b2b">
   <div class="wrap two">
     <div class="rv">
-      <div class="eyebrow">Case 2 · 실제 운영</div>
+      <div class="eyebrow">Project 3 · 실제 운영</div>
       <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">글로벌 타깃 영문 콘텐츠<br>기획 및 반응률 분석</h2>
       <p class="sec-sub">네이처오다 링크드인 B2B 콘텐츠 · 단독 운영</p>
       <p>해외 바이어 발굴을 위해 파트너십 CTA를 포함한 <b>영문 게시물 9건</b>을 발행해, 누적 노출 <b>2,270회</b>, 반응 <b>60건</b>을 기록했습니다.</p>
@@ -605,7 +683,7 @@ section{position:relative;padding:120px 0}
   <div class="wrap">
     <div class="channel-hero">
       <div class="rv">
-        <div class="eyebrow">Content &amp; Channel</div>
+        <div class="eyebrow">Project 4 · Content &amp; Channel</div>
         <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">콘텐츠 기획부터<br>인스타그램·유튜브 채널 운영까지</h2>
         <p class="org">천원의 아침밥 서포터즈 4기(대상) · 아이즈모바일 아이즈크루 2기 · YBM 홍보 서포터즈 · DSC 공유대학 서포터즈</p>
         <p>통신 요금제, 어학 강의, 정부 정책 등 다양한 분야의 타깃 특성을 분석하고, 각 매체에 최적화된 콘텐츠를 직접 기획·제작·발행해 왔습니다.</p>
@@ -627,25 +705,22 @@ section{position:relative;padding:120px 0}
 <!-- NEXT -->
 <section id="next">
   <div class="wrap">
-    <div class="eyebrow rv">Next</div>
-    <h2 class="sec-title rv" style="font-size:clamp(28px,3.6vw,44px)">ANUA에서도 같은 순서로 일하겠습니다</h2>
+    <div class="eyebrow rv">Next · ANUA Global Content Marketing</div>
+    <h2 class="sec-title rv" style="font-size:clamp(28px,3.6vw,44px)">콘텐츠의 가능성을 발견하고,<br>데이터로 성장을 만듭니다</h2>
     <div class="next-table rv">
-      <div class="next-head"><span>달칩샌드에서 확인한 것</span><span></span><span>글로벌 콘텐츠 마케팅에 적용할 방식</span></div>
-      <div class="next-row"><span>데이터로 세운 가설을 숏폼 2편으로 만들어 비교</span><span class="arrow">→</span><span class="to">Hero SKU의 소구 포인트를 가설로 세우고, 숏폼 콘텐츠로 빠르게 비교</span></div>
-      <div class="next-row"><span>시청과 클릭은 따로 움직였고, 원본으로 되돌림</span><span class="arrow">→</span><span class="to">크리에이터 가이드라인에 ‘보게 할 장면’과 ‘누르게 할 장면’을 따로 지정</span></div>
-      <div class="next-row"><span>예상 밖 반응층(55세 이상) 발견</span><span class="arrow">→</span><span class="to">반응층별로 크리에이터를 나눠 캐스팅하고 다시 테스트</span></div>
-      <div class="next-row"><span>링크 클릭의 76%가 릴스 지면</span><span class="arrow">→</span><span class="to">틱톡·릴스 9:16 문법을 기본 포맷으로</span></div>
-      <div class="next-row"><span>구매 전환 추적의 한계를 인지</span><span class="arrow">→</span><span class="to">발행 후 조회수가 아니라 전환 기준으로 성과를 리뷰하고 가설 재설계</span></div>
+      <div class="next-head"><span>과거의 인사이트</span><span></span><span>My Approach</span></div>
+      <div class="next-row"><span>한일 소비자 비교로 ‘고소함 + 초코의 조화’ 메시지 도출</span><span class="arrow">→</span><span class="to"><b>1. Discover</b><br>시장과 소비자 반응을 분석해 제품의 차별화된 소구점을 발견하겠습니다.</span></div>
+      <div class="next-row"><span>서로 다른 타깃 인사이트로 캐릭터편·코미디편을 기획하고, 예상과 달리 캐릭터편이 CPC 28% 낮음</span><span class="arrow">→</span><span class="to"><b>2. Create</b><br>글로벌 소비자의 관심과 공감을 구매 행동으로 연결하는 콘텐츠를 기획하겠습니다.</span></div>
+      <div class="next-row"><span>시청은 늘고 클릭은 줄어든 보완판을 멈추고 원본 유지</span><span class="arrow">→</span><span class="to"><b>3. Optimize</b><br>콘텐츠 발행 후 성과를 분석하고, 검증된 인사이트를 다음 콘텐츠에 반영하겠습니다.</span></div>
     </div>
     <p class="note rv">인플루언서 캐스팅·파트너십 관리와 틱톡 집행은 아직 직접 해 보지 않은 영역입니다.</p>
-    <p class="closing rv">가설을 세우고, 직접 만들고,<br>숫자로 다시 바꾸는 <span class="accent">콘텐츠 기획자</span>가 되겠습니다.</p>
   </div>
 </section>
 
 <!-- THANKS -->
 <section id="thanks" class="glow">
   <div class="wrap">
-    <div class="small">portfolio</div><br>
+    <div class="small">BOKYUNG SONG · Global Content Marketing</div><br>
     <h2><em>Thank you</em>감사합니다</h2>
     <p class="contact"><a href="mailto:khodu0616@gmail.com">khodu0616@gmail.com</a></p>
   </div>
@@ -698,7 +773,7 @@ section{position:relative;padding:120px 0}
   links.addEventListener('click',function(e){if(e.target.tagName==='A')links.classList.remove('open')});
 
   var navA=[].slice.call(links.querySelectorAll('a'));
-  var secMap={evidence:'evidence',about:'about',dalchip:'dalchip',research:'dalchip',creative:'dalchip',test:'dalchip',audience:'dalchip',result:'dalchip',b2b:'b2b',more:'more',next:'next'};
+  var secMap={evidence:'evidence',about:'about',dalchip:'dalchip',research:'dalchip',creative:'dalchip',test:'dalchip',audience:'dalchip',result:'dalchip',anua:'anua',b2b:'b2b',more:'more',next:'next'};
   function fillBars(root){[].forEach.call(root.querySelectorAll('.fill[data-w]'),function(f){f.style.width=f.getAttribute('data-w')+'%'})}
   function revealAll(){fillBars(document)}
   addEventListener('beforeprint',revealAll);
