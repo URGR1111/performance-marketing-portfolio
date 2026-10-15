@@ -164,7 +164,7 @@ section{position:relative;padding:120px 0}
 
 .study-step{margin-top:64px}
 .story{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.frame{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;min-height:200px;display:flex;flex-direction:column}
+.frame{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px 22px;min-height:140px;display:flex;flex-direction:column}
 .frame .t{font-size:13px;font-weight:700;color:var(--accent-d);letter-spacing:.06em}
 .frame b{font-size:18px;margin:6px 0 10px}
 .frame p{font-size:15px;color:var(--ink2);margin:0}
@@ -291,6 +291,45 @@ section{position:relative;padding:120px 0}
   html{scroll-behavior:auto}
   .fill{transition:none}
 }
+
+/* v3 additions */
+.can{display:grid;gap:12px}
+.can-item{display:grid;grid-template-columns:40px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.can-item .n{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent-d);font-weight:700;display:grid;place-items:center}
+.can-item b{display:block;font-size:17px;margin-bottom:4px}
+.can-item span{font-size:14.5px;color:var(--ink2)}
+.tlist{display:grid;gap:12px;margin:18px 0 6px}
+.tlist > div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.tlist b{display:block;font-size:16px;margin-bottom:6px}
+.tlist span{display:block;font-size:14.5px;color:var(--ink2);margin:3px 0}
+.tlist i{font-style:normal;font-weight:700;color:var(--accent-d);display:inline-block;width:42px}
+.disclaim{display:inline-block;background:var(--accent-ll);border:1px dashed var(--accent);border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;color:var(--accent-d);max-width:820px}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.facts-grid div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.facts-grid b{display:block;font-size:clamp(22px,2.4vw,30px);color:var(--accent);letter-spacing:-.02em;line-height:1.2;margin-bottom:6px}
+.facts-grid span{font-size:14px;color:var(--ink2)}
+.idea{margin-top:22px}
+.idea-h{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:12px}
+.idea-h b{font-size:19px}
+.idea-h span{font-size:13px;font-weight:700;background:var(--accent-l);color:var(--accent-d);padding:3px 12px;border-radius:999px}
+.htable{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.hrow{display:grid;grid-template-columns:150px 1fr 1fr 1.2fr;gap:16px;padding:16px 20px;border-top:1px solid var(--line);font-size:15px}
+.hrow.head{border-top:0;background:var(--accent-ll);font-size:13px;font-weight:700;color:var(--accent-d)}
+.cfit{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;font-size:15px}
+.cfit b{display:block;margin-bottom:4px}
+.cfit span{color:var(--ink2)}
+#thanks{text-align:left;padding:140px 0 120px}
+#thanks .closing-h{display:block;font-size:clamp(25px,4.6vw,56px);font-weight:700;letter-spacing:-.03em;line-height:1.3;margin:0 0 14px}
+.closing-sub{color:var(--ink2);font-size:16px;margin:0 0 36px}
+.contact-list{list-style:none;padding:0;margin:0;max-width:640px;border-top:2px solid var(--ink)}
+.contact-list li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.contact-list span{font-weight:700;color:var(--muted)}
+.contact-list a{text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.contact-list a:hover{color:var(--accent-d)}
+.thanks-word{margin:56px 0 0;font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(44px,6vw,72px);color:var(--accent);transform:rotate(-4deg);transform-origin:left}
+.thanks-word em{font-style:normal}
+@media (max-width:980px){.facts-grid{grid-template-columns:1fr 1fr}.hrow{grid-template-columns:1fr 1fr}.hrow.head{display:none}.hrow b{grid-column:1/-1}}
+@media (max-width:720px){.facts-grid{grid-template-columns:1fr}.hrow{grid-template-columns:1fr;gap:6px}.contact-list li{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
@@ -303,29 +342,29 @@ section{position:relative;padding:120px 0}
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
       <a href="#dalchip">Main Project</a>
-      <a href="#evidence">Data</a>
-      <a href="#anua">ANUA Study</a>
+      <a href="#sns">SNS</a>
       <a href="#b2b">B2B Content</a>
-      <a href="#more">Content</a>
-      <a href="#next">Next</a>
+      <a href="#anua">ANUA Proposal</a>
+      <a href="#evidence">Data</a>
+      <a href="#thanks">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- COVER -->
+<!-- 1 COVER -->
 <section id="cover" class="glow">
   <div class="wrap">
     <h1>PORTFOLIO</h1>
-    <p class="tagline">콘텐츠로 반응을 만들고,<br>데이터로 성과를 증명합니다.</p>
+    <p class="tagline">글로벌 소비자를 이해하고,<br>콘텐츠로 연결하는 마케터 <b>송보경</b>입니다.</p>
     <p class="cover-name">송보경 <b>BOKYUNG SONG</b></p>
-    <p class="meta">Consumer Insight · Creative Strategy · Data-driven Optimization</p>
+    <p class="meta">Consumer Insight · Short-form Content · Data-driven Optimization</p>
     <p class="meta">ANUA Global Content Marketing 지원 포트폴리오 · 2026.10</p>
   </div>
   <div class="scroll-cue">SCROLL</div>
 </section>
 
-<!-- ABOUT -->
+<!-- 2 ABOUT -->
 <section id="about">
   <div class="wrap about-grid">
     <div class="profile rv">
@@ -338,10 +377,14 @@ section{position:relative;padding:120px 0}
     <div>
       <div class="about-head rv">
         <h2>About <span class="accent">me</span></h2>
-        <p>콘텐츠로 소비자의 반응을 만들고, 데이터로 다음 전략을 설계하는 마케터 송보경입니다.</p>
-        <p class="about-desc">글로벌 시장과 소비자 데이터를 바탕으로 타깃을 정의하고, 인사이트를 콘텐츠 콘셉트로 구체화해 왔습니다. 직접 기획·제작한 광고 소재를 집행하고 성과를 분석하며, 데이터에 근거해 콘텐츠와 예산을 개선한 경험이 있습니다. 글로벌 타깃 콘텐츠 운영 경험을 바탕으로 소비자의 관심을 브랜드에 대한 관심과 구매 행동으로 연결하는 콘텐츠 마케터로 성장하고자 합니다.</p>
+        <p>글로벌 소비자를 이해하고, 콘텐츠로 연결하는 마케터 송보경입니다.</p>
       </div>
-      <div class="about-cols rv">
+      <div class="can rv">
+        <div class="can-item"><div class="n">1</div><div><b>글로벌 시장·소비자 분석</b><span>달칩샌드 일본 진출에서 한일 소비자 만족도와 라쿠텐 리뷰를 비교하고, 일본인 유학생 3명을 인터뷰해 타깃과 제품 소구점을 정했습니다.</span></div></div>
+        <div class="can-item"><div class="n">2</div><div><b>숏폼 영상 및 SNS 콘텐츠 기획·제작</b><span>일본 아이엄마 타깃 숏폼 광고 3편을 레퍼런스 설정부터 AI 제작, 일본어 더빙까지 직접 만들었습니다. 서포터즈 카드뉴스로 천원의 아침밥 대상을 받았습니다.</span></div></div>
+        <div class="can-item"><div class="n">3</div><div><b>채널 운영 및 광고 성과 분석</b><span>Meta 광고를 2주간 집행하며 소재·연령·지면별 성과를 나눠 예산을 옮겼고, 영문 링크드인 B2B 콘텐츠 9건을 혼자 운영했습니다.</span></div></div>
+      </div>
+      <div class="about-cols rv" style="margin-top:40px">
         <div class="blk">
           <h4>Experience</h4>
           <ul class="rows">
@@ -376,45 +419,30 @@ section{position:relative;padding:120px 0}
             <li><span>2021 – 2023</span>목원대학교 취업 서포터즈 1~3기</li>
           </ul>
         </div>
-        <div class="blk">
-          <h4>Tools</h4>
-          <p style="font-size:15px">Google Flow/Veo · Higgsfield · Fish Audio · CapCut · Meta 광고관리자 · Python(pandas) · Tableau · Lovable · 미리캔버스</p>
-        </div>
-        <div class="blk">
-          <h4>Channel</h4>
-          <ul class="rows">
-            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jay-bokyung-song-457332276/" target="_blank" rel="noopener">linkedin.com/in/jay-bokyung-song</a></li>
-            <li><span>Blog</span><a href="https://blog.naver.com/urgr0226" target="_blank" rel="noopener">blog.naver.com/urgr0226</a></li>
-            <li><span>Instagram</span><a href="https://instagram.com/s.bokyung98" target="_blank" rel="noopener">instagram.com/s.bokyung98</a></li>
-            <li><span>YouTube</span><a href="https://www.youtube.com/@bokyung30" target="_blank" rel="noopener">youtube.com/@bokyung30</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MAIN PROJECT INTRO -->
+<!-- 3 MAIN PROJECT INTRO -->
 <section id="dalchip" class="glow">
   <div class="wrap intro-grid">
     <div class="rv">
-      <div class="eyebrow">Project 1 · Main · 실제 집행</div>
-      <h2 class="sec-title">가설을 세우고,<br>직접 만들고,<br>숫자로 다시 바꿨습니다</h2>
+      <div class="eyebrow">Main Project · 실제 집행</div>
+      <h2 class="sec-title">일본 소비자를 이해하고,<br>콘텐츠로 연결했습니다</h2>
       <p class="sec-sub">네이처오다 달칩샌드 일본 진출 · 제1기 KITA 글로벌마케팅마스터 마케팅 프로젝트 최우수상</p>
       <div class="tags">
-        <div class="tag">① 가설<br>세우기</div>
-        <div class="tag">② 직접<br>만들기</div>
-        <div class="tag">③ 숫자<br>보기</div>
-        <div class="tag">④ 다시<br>바꾸기</div>
+        <div class="tag">시장<br>분석</div>
+        <div class="tag">콘텐츠<br>제작</div>
+        <div class="tag">광고<br>테스트</div>
+        <div class="tag">성과 및<br>개선</div>
       </div>
-      <div class="route"><span>Meta 광고</span><i>→</i><span>Amazon.co.jp 상품 페이지 직행</span></div>
       <p class="q">쌀과자의 본고장 일본에서, 생소한 한국 쌀과자가 살아남을 방법은 무엇일까?</p>
-      <p class="lead">도쿄·오사카 3040 아이엄마에게 통할 메시지를 데이터로 가설을 세우고, 숏폼 광고를 직접 만들어 2주간 집행했습니다. 숫자가 가설을 뒤집으면 바로 소재와 예산을 바꿨고, 이 순환을 두 번 돌렸습니다.</p>
       <table class="facts">
-        <tr><th>캠페인</th><td>Meta(페이스북·인스타그램·스레드) · 링크 클릭 목적 · 2주</td></tr>
-        <tr><th>예산</th><td>캠페인 전체 ₩469,201 · 내 담당 세트 ₩338,026<small>한정된 예산에서 성과를 높이기 위해, 단순 수치 비교를 넘어 소재 간 CTR 차이의 통계적 유의성을 검증했습니다. 우연에 의한 차이가 아님을 확인한 고성과 소재(Winner)에 예산을 집중했습니다.</small></td></tr>
+        <tr><th>캠페인</th><td>Meta(페이스북·인스타그램·스레드) · 링크 클릭 목적 · 2주 · Amazon.co.jp 상품 페이지 직행</td></tr>
+        <tr><th>예산</th><td>캠페인 전체 ₩469,201 · 내 담당 세트 ₩338,026</td></tr>
         <tr><th>타깃</th><td>도쿄·오사카 30~40대 아이엄마 (내 담당 세트)</td></tr>
-        <tr><th>내 역할</th><td>일본 시장 분석 · 아이엄마 타깃 숏폼 소재 기획 및 제작(100%) · Meta 광고 집행 및 성과 데이터 분석</td></tr>
+        <tr><th>내 역할</th><td>일본 시장 분석 · 아이엄마 타깃 숏폼 소재 기획 및 제작(100%) · Meta 광고 집행 및 성과 분석</td></tr>
         <tr><th>범위</th><td>KITA 과정 연계 기업 프로젝트 참여<small>수행 범위는 기획·광고·홍보·데이터 분석이며, 실제 수출·납품·판매는 하지 않았습니다.</small></td></tr>
       </table>
     </div>
@@ -424,35 +452,34 @@ section{position:relative;padding:120px 0}
         <span>영상 보기</span>
         <a class="btn" href="https://www.youtube.com/watch?v=HyQqhv2wuxw" target="_blank" rel="noopener">캐릭터편 ↗</a>
         <a class="btn" href="https://www.youtube.com/watch?v=tndAloKpasc" target="_blank" rel="noopener">코미디편 ↗</a>
-        <a class="btn" href="https://www.youtube.com/watch?v=rYDwXGkZ_iY" target="_blank" rel="noopener">캐릭터 2차 보완편 ↗</a>
+        <a class="btn" href="https://www.youtube.com/watch?v=rYDwXGkZ_iY" target="_blank" rel="noopener">캐릭터 보완편 ↗</a>
       </div>
     </div>
   </div>
   <div class="wrap" style="margin-top:80px">
     <div class="kpi-row rv">
-      <div class="kpi"><div class="v">−28%</div><div class="l">뒤집힌 가설</div><div class="s">캐릭터 CPC ₩143 vs 코미디 ₩200</div></div>
       <div class="kpi"><div class="v">2,339</div><div class="l">링크 클릭</div><div class="s">캠페인 전체 3,149의 74%</div></div>
       <div class="kpi"><div class="v">3.50%</div><div class="l">링크 CTR</div><div class="s">캠페인 평균 2.51%의 1.4배</div></div>
-      <div class="kpi"><div class="v">₩138</div><div class="l">지출 2.6배 늘려도 CPC 하락</div><div class="s">캐릭터 소재 ₩143 → ₩138</div></div>
+      <div class="kpi"><div class="v">₩145</div><div class="l">링크 CPC</div><div class="s">담당 세트 2주 평균</div></div>
+      <div class="kpi"><div class="v">−28%</div><div class="l">캐릭터편 CPC</div><div class="s">₩143 vs 코미디편 ₩200</div></div>
     </div>
-    <p class="note">아이엄마 타깃 세트 · 2주 · 링크 클릭 기준 · 지출 2.6배 = 캐릭터 소재 1주차 ₩84,150 → 2주차 ₩221,065 · <a class="ev-link" href="#ev-ads-t1">근거 E1 광고관리자 원본 →</a></p>
+    <p class="note">제가 만든 소재가 투입된 아이엄마 타깃 세트 · 2주 · 링크 클릭 기준 · <a class="ev-link" href="#ev-ads-t1">근거 E1 광고관리자 원본 →</a></p>
   </div>
 </section>
 
-<!-- STEP 1: TARGET & MESSAGE -->
+<!-- 4 STEP 1 -->
 <section id="research">
   <div class="wrap">
-    <div class="eyebrow rv">Step 1 · 가설 세우기</div>
-    <h3 class="h3 rv">시장 데이터로 ‘누구에게, 어떤 말로’ 들어갈지 가설을 세웠습니다</h3>
-    <div class="flow-badge rv"><b>숫자</b><i>→</i><b>가설</b></div>
-    <div class="read-head c2"><span>숫자</span><span>가설</span></div>
+    <div class="eyebrow rv">Step 1 · 시장과 소비자 이해</div>
+    <h3 class="h3 rv">일본 시장 조사, 리뷰 분석, 소비자 인터뷰로<br>타깃과 제품 소구점을 정했습니다</h3>
+    <div class="flow-badge rv"><b>숫자</b><i>→</i><b>판단</b></div>
+    <div class="read-head c2"><span>숫자</span><span>판단</span></div>
     <div class="read c2 rv">
-      <div class="read-row"><div class="num"><b>77.5%</b>일본 쌀과자 시장 중 간장맛</div><div class="act">간장맛에 편중된 시장의 공백을 파악하고, ‘건강과 맛을 동시에 잡는 초코 쌀과자’로 포지셔닝</div></div>
-      <div class="read-row"><div class="num"><b>91%</b>일본 가정 식품 구매를 아내가 결정</div><div class="act">식품 구매 결정권자(아내) 데이터를 근거로, 30~40대 아이엄마를 1순위 실구매층으로 설정 (3~12세 자녀 · 추정 630~780만)</div></div>
-      <div class="read-row"><div class="num"><b>69.3%</b>캐릭터 과자 구매자 중 30~40대 여성</div><div class="act">3040 여성의 캐릭터 과자 소비 성향을 근거로, 브랜드 캐릭터 ‘달치비’를 광고의 메인 페르소나로 활용</div></div>
-      <div class="read-row"><div class="num"><b>70% vs 40%</b>고소함 만족도 (한국 vs 일본)</div><div class="act">한일 소비자 니즈 비교를 통해, 쌀의 고소함과 초코의 밸런스를 함께 강조하는 현지 맞춤형 카피 확정</div></div>
+      <div class="read-row"><div class="num"><b>77.5%</b>일본 쌀과자 시장 중 간장맛</div><div class="act">간장맛에 편중된 시장의 공백을 보고, ‘건강과 맛을 함께 잡는 초코 쌀과자’로 포지셔닝</div></div>
+      <div class="read-row"><div class="num"><b>91%</b>일본 가정 식품 구매를 아내가 결정</div><div class="act">구매 결정권자 데이터를 근거로 30~40대 아이엄마를 1순위 타깃으로 설정 (3~12세 자녀 · 추정 630~780만)</div></div>
+      <div class="read-row"><div class="num"><b>69.3%</b>캐릭터 과자 구매자 중 30~40대 여성</div><div class="act">브랜드 캐릭터 ‘달치비’를 광고의 주인공으로 활용</div></div>
+      <div class="read-row"><div class="num"><b>70% vs 40%</b>고소함 만족도 (한국 vs 일본)</div><div class="act">일본 소비자는 초코와의 균형을 본다고 판단해 ‘쌀의 고소함과 초코 크림의 조화’로 카피 확정</div></div>
     </div>
-
     <div class="two" style="margin-top:34px">
       <div class="chart rv">
         <h5>한·일 세부 속성 만족도</h5>
@@ -463,46 +490,46 @@ section{position:relative;padding:120px 0}
         <h5>실제 리뷰 감정 비교</h5>
         <div class="legend"><span><i style="background:var(--accent)"></i>긍정</span><span><i style="background:#d9d9d9"></i>중립</span><span><i style="background:var(--bad)"></i>부정</span></div>
         <div id="sentChart"></div>
-        <p class="note" style="margin-top:18px">한일 속성 만족도와 리뷰 감정을 비교한 결과, 한국 소비자는 쌀 본연의 고소함(만족도 70%)에 집중한 반면, 일본 소비자는 초코와의 밸런스(단맛 만족도 50%)를 더 중요하게 평가했습니다. 이를 바탕으로 ‘쌀의 고소함과 초코 크림의 조화’를 강조하는 현지 맞춤형 카피를 도출했습니다.</p>
+        <p class="note" style="margin-top:18px">한국 소비자는 쌀 본연의 고소함(만족도 70%)에 만족했지만, 일본 소비자는 초코와의 밸런스(단맛 만족도 50%)를 더 중요하게 봤습니다. 이 차이가 카피 방향을 바꿨습니다.</p>
       </div>
     </div>
-
     <div class="cards2">
-      <div class="rcard rv"><h4>대표 미팅</h4><img src="../images/insight_meeting.jpg" alt="네이처오다 대표 미팅" /><p>네이처오다 대표 인터뷰로 제품의 소구점과 일본 현지 판매 현황을 파악하고, 광고 소재에 쓸 수 있는 표현의 가이드라인을 조율</p></div>
-      <div class="rcard rv"><h4>소비자 인터뷰</h4><img src="../images/insight_interview.jpg" alt="일본인 유학생 인터뷰" /><p>재한 일본인 유학생 3명과 시식 인터뷰를 하고 ① 맛·식감 ② 패키지 디자인 ③ 선물(오미야게) 문화 적합성을 확인</p></div>
+      <div class="rcard rv"><h4>대표 미팅</h4><img src="../images/insight_meeting.jpg" alt="네이처오다 대표 미팅" /><p>네이처오다 대표 인터뷰로 제품의 소구점과 일본 현지 판매 현황을 파악하고, 광고에 쓸 수 있는 표현의 범위를 확인</p></div>
+      <div class="rcard rv"><h4>소비자 인터뷰</h4><img src="../images/insight_interview.jpg" alt="재한 일본인 유학생 인터뷰" /><p>재한 일본인 유학생 3명과 시식 인터뷰를 하고 ① 맛·식감 ② 패키지 디자인 ③ 선물(오미야게) 문화 적합성을 확인</p></div>
     </div>
   </div>
 </section>
 
-<!-- STEP 2: CREATIVE -->
+<!-- 4 STEP 2 -->
 <section id="creative">
   <div class="wrap">
-    <div class="eyebrow rv">Step 2 · 직접 만들기</div>
-    <h3 class="h3 rv">가설을 숏폼으로 옮겨, 장면 설계부터 더빙까지 직접 만들었습니다</h3>
-    <div class="creative-grid">
+    <div class="eyebrow rv">Step 2 · 인사이트를 콘텐츠로 전환</div>
+    <h3 class="h3 rv">같은 엄마, 다른 두 마음에<br>서로 다른 가설로 두 편을 직접 만들었습니다</h3>
+    <div class="steps rv" style="margin-top:0">
+      <div class="step"><div class="k">캐릭터 애니메이션편 · 감성</div><h5>“안심하고 먹일 수 있는 간식을 만들어 줄게”</h5><p><b>가설</b> 안심 간식을 찾는 감성형 엄마에게는 돌봄의 서사가 통할 것이다.<br><b>레퍼런스</b> 일본의 달토끼 문화와 마법소녀 변신 장면<br><b>구성</b> 간식 고민 메시지 → 달치비의 다짐 → 변신 → 제작 → 완성</p></div>
+      <div class="step"><div class="k">일본 예능 스타일 코미디편 · 이성</div><h5>성분표 앞에서 고민하는 엄마에게 바로 답한다</h5><p><b>가설</b> 성분표부터 확인하는 실용형 엄마에게는 직접적인 답이 통할 것이다.<br><b>레퍼런스</b> 일본 B급 예능의 진행자 개입 화법<br><b>구성</b> 제품 컷 → 성분 고민 → 진행자 등장 → 글루텐프리·논프라이·로우슈거</p></div>
+    </div>
+    <div class="creative-grid" style="margin-top:30px">
       <div>
         <div class="stills rv">
           <img src="../images/still_1.jpg" alt="캐릭터편 장면 1" />
           <img src="../images/still_2.jpg" alt="캐릭터편 장면 2" />
+          <img src="../images/still_5.jpg" alt="캐릭터편 고민 메시지 장면" />
           <img src="../images/still_3.jpg" alt="코미디편 장면 1" />
           <img src="../images/still_4.jpg" alt="코미디편 장면 2" />
-          <img src="../images/still_5.jpg" alt="캐릭터편 고민 메시지 장면" />
         </div>
-        <div class="rv" style="margin-top:28px">
-          <p>성분을 꼼꼼히 따지는 실용주의 부모를 위한 ‘코미디편’과, 안심 간식을 찾는 감성 중심 부모를 위한 ‘캐릭터편’을 각각 기획했습니다. 현지 타깃에게 익숙하게 다가가기 위해 일본의 달토끼 문화와 마법소녀 변신 장면, 일본 예능의 진행자 화법을 레퍼런스로 정하고, 스토리보드를 먼저 짠 뒤 제작에 들어갔습니다.</p>
-          <p>장면별 이미지를 AI로 먼저 생성한 뒤 영상으로 변환하는 방식을 택했습니다. 이미지에서 영상으로 넘어갈 때 시각적 일관성을 지키고 퀄리티 차이를 줄이는 데 가장 많은 공을 들였습니다. Google Flow와 Higgsfield로 영상을 만들고, Fish Audio로 일본어 더빙까지 직접 작업했습니다.</p>
-        </div>
+        <p class="rv" style="margin-top:28px">장면별 이미지를 Google Flow로 먼저 만들고 Higgsfield로 영상화했습니다. 이미지에서 영상으로 넘어갈 때 캐릭터 모습이 달라지는 구간은 프롬프트를 반복해 고치며 맞췄고, 편집과 Fish Audio 일본어 더빙까지 직접 했습니다.</p>
       </div>
       <figure class="prompt rv" style="margin:0"><img src="../images/prompt_panel.png" alt="장면 생성 프롬프트 예시" /></figure>
     </div>
   </div>
 </section>
 
-<!-- STEP 3: TEST -> BUDGET -->
+<!-- 5 STEP 3 -->
 <section id="test" class="glow">
   <div class="wrap">
-    <div class="eyebrow rv">Step 3 · 숫자 보기 → 다시 바꾸기</div>
-    <h3 class="h3 rv">숫자가 제 가설을 두 번 뒤집었고,<br>그때마다 바로 다시 바꿨습니다</h3>
+    <div class="eyebrow rv">Step 3 · 성과를 바탕으로 판단</div>
+    <h3 class="h3 rv">예상과 다른 숫자가 나왔고,<br>그 숫자대로 소재와 예산을 바꿨습니다</h3>
     <div class="two">
       <div class="chart rv">
         <h5>소재별 링크 CPC · 낮을수록 좋음</h5>
@@ -510,184 +537,37 @@ section{position:relative;padding:120px 0}
         <p class="note">아이엄마 타깃 세트 · 2주 합산 · 링크 클릭 기준 · 세트 평균 ₩145</p>
       </div>
       <div class="read rv">
-        <div class="read-row" style="grid-template-columns:1fr"><div class="num"><b>1주차 · CTR 4.70% vs 3.00%</b>캐릭터편 vs 코미디편 · CPC ₩143 vs ₩200 · p&lt;0.001</div><div><b>가설</b> 완성도 높은 B급 예능 톤 코미디편이 이길 것이다.<br><b>결과</b> 뒤집혔습니다. 마법소녀물 같은 캐릭터편의 동화적인 연출이 부모 타깃의 경계심을 낮추고 클릭을 이끌어냈습니다.</div><div class="act" style="border-left:0;border-top:1px dashed var(--line)">바꾼 것: 코미디 중단, 세트 일예산 ₩14,300 → ₩70,000</div></div>
-        <div class="read-row" style="grid-template-columns:1fr"><div class="num"><b>2주차 · CTR 1.69% vs 3.38%</b>캐릭터 2차(보완판) vs 원본 · CPC ₩239 vs ₩138 · p&lt;0.001</div><div><b>가설</b> 첫 장면에 제품을 당기고 길이를 줄이면 클릭도 오를 것이다. 그래서 보완판을 다시 만들었습니다.<br><b>결과</b> 25% 지점까지 본 비율은 약 3배(8.6% → 25.6%) 올랐지만, 링크 CTR은 절반으로 떨어졌습니다. 보게 만드는 장면과 누르게 만드는 장면은 다르다는 것을 배웠습니다. <a class="ev-link" href="#ev-v2">근거 E7 →</a></div><div class="act" style="border-left:0;border-top:1px dashed var(--line)">바꾼 것: 보완판을 멈추고 원본에 예산 유지</div></div>
+        <div class="read-row" style="grid-template-columns:1fr"><div class="num"><b>1주차 · CTR 4.70% vs 3.00%</b>캐릭터편 vs 코미디편 · CPC ₩143 vs ₩200</div><div>완성도 높은 코미디편이 이길 거라 예상했지만, 캐릭터편의 동화적인 연출이 부모의 경계심을 낮추고 클릭을 이끌었습니다.</div><div class="act" style="border-left:0;border-top:1px dashed var(--line)">코미디편 중단, 세트 일예산 ₩14,300 → ₩70,000</div></div>
+        <div class="read-row" style="grid-template-columns:1fr"><div class="num"><b>2주차 · CTR 1.69% vs 3.38%</b>캐릭터 보완판 vs 원본 · CPC ₩239 vs ₩138</div><div>첫 장면에 제품을 당긴 보완판은 25% 지점까지 본 비율을 약 3배(8.6% → 25.6%) 올렸지만 링크 CTR은 절반으로 떨어졌습니다. 보게 만드는 장면과 누르게 만드는 장면은 달랐습니다.</div><div class="act" style="border-left:0;border-top:1px dashed var(--line)">보완판 중단, 원본에 예산 유지 · 지출 2.6배에도 CPC ₩138</div></div>
       </div>
     </div>
-    <div class="read rv" style="margin-top:12px"><div class="read-row"><div class="num"><b>끝까지 본 비율 7.35% vs 2.60%</b>1주차 코미디편 vs 캐릭터편 · 노출 대비 ThruPlay</div><div>코미디편은 끝까지 본 비율(ThruPlay)이 높았지만, 클릭으로는 이어지지 않았습니다.</div><div class="act">캠페인의 최종 KPI인 링크 클릭 효율이 앞선 캐릭터편에 예산 집중</div></div></div>
-    <p class="quote rv">Meta가 소재별 노출을 자동으로 분배하기 때문에 무작위 A/B 테스트와 같지는 않습니다. 그래서 CTR 격차가 우연에 의한 것인지 비율 검정으로 추가 확인했습니다(p&lt;0.001). <a class="ev-link" href="#ev-creative">근거 E4 재집계·검정 →</a></p>
-    <figure class="shot rv" style="margin-left:0;margin-right:0">
-      <img src="../images/ads_table.png" alt="Meta 광고관리자 소재별 성과 표" />
-      <figcaption>Meta 광고관리자 원본 · 아이엄마 타깃 세트 소재 4개 (예산은 광고 세트 단위)</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- STEP 4: AUDIENCE & PLACEMENT -->
-<section id="audience">
-  <div class="wrap">
-    <div class="eyebrow rv">Step 4 · 다음 가설 세우기</div>
-    <h3 class="h3 rv">누가, 어디서 반응했는지 보고<br>다음에 시험할 가설을 정했습니다</h3>
-    <div class="read-head"><span>숫자</span><span>해석</span><span>다음 가설·실행</span></div>
+    <div class="read-head" style="margin-top:34px"><span>숫자</span><span>해석</span><span>다음 판단</span></div>
     <div class="read rv">
-      <div class="read-row"><div class="num"><b>여성 87%</b>링크 클릭 2,339건 중 2,037건이 여성</div><div>초기 타깃 가설(여성 주도 구매)이 실제 클릭 데이터로 확인됨</div><div class="act">핵심 타깃인 아이엄마의 페인포인트(성분 고민)를 말하는 메인 메시지 유지</div></div>
-      <div class="read-row"><div class="num"><b>CTR 4.54% vs 3.08%</b>55세 이상 vs 25~54세 · 55세 이상이 링크 클릭의 37%</div><div>손주 간식을 사는 55세 이상 조부모층의 높은 반응률 · 신규 타깃 가능성 발견</div><div class="act">2차 소재에서 캐릭터(친근함) 비중 확대 · 5060 전용 세트를 분리한 비교 테스트 제안</div></div>
-      <div class="read-row"><div class="num"><b>릴스 76%</b>2주차 링크 클릭 1,674건 중 1,280건 · 페이스북 릴스 770 · 인스타 릴스 505</div><div>링크 클릭의 76%가 숏폼(릴스) 지면에서 발생 · 클릭은 세로형 영상 지면에 집중됨</div><div class="act">9:16 세로형 포맷을 최우선으로 제작 · 릴스 단독 지면 테스트로 비용 효율까지 검증</div></div>
-    </div>
-    <p class="note rv">Meta 자동 노출 위치(Advantage+)로 집행한 결과를 지면별로 나눠 클릭 기여도를 분석했고, 차기 캠페인의 지면 분리 테스트 단서로 활용했습니다. 지면별 비용 데이터는 없어 비용 효율은 비교하지 않았습니다. 성별·연령은 아이엄마 타깃 세트 2주 합산, 지면은 같은 세트의 2주차 기준입니다. <a class="ev-link" href="#ev-age">근거 E5 성별·연령 →</a> <a class="ev-link" href="#ev-place">근거 E6 지면 →</a></p>
-  </div>
-</section>
-
-<!-- RESULT & LIMIT -->
-<section id="result" class="glow">
-  <div class="wrap">
-    <div class="eyebrow rv">Result · 결과와 한계</div>
-    <h3 class="h3 rv">유입(클릭) 성과는 증명했고,<br>최종 전환(구매)은 트래킹 고도화 과제로 남겼습니다</h3>
-    <div class="boxes rv">
-      <div class="box"><h5>아이엄마 타깃 세트 · 링크 클릭 기준</h5>
-        <ul>
-          <li>링크 클릭 <b>2,339건</b> · 캠페인 전체 3,149건의 74%</li>
-          <li>노출 66,856 · 캠페인 전체 125,590의 53%</li>
-          <li>링크 CTR <b>3.50%</b> · 링크 CPC <b>₩145</b></li>
-        </ul>
-      </div>
-      <div class="box"><h5>캠페인 전체 1주차 → 2주차 · 전체 클릭 기준</h5>
-        <ul>
-          <li>지출 <b>+74%</b> (17.1만 → 29.8만 원)</li>
-          <li>클릭 <b>+87%</b> · 예산 증가폭을 넘는 트래픽 확대</li>
-          <li>CTR <b>+20%</b> · CPC <b>−7%</b> · 볼륨을 키우면서도 유입 단가 개선</li>
-        </ul>
-      </div>
+      <div class="read-row"><div class="num"><b>여성 87%</b>링크 클릭 2,339건 중 2,037건</div><div>여성 주도 구매라는 타깃 가설이 클릭 데이터로 확인됨</div><div class="act">성분 고민을 말하는 메인 메시지 유지</div></div>
+      <div class="read-row"><div class="num"><b>CTR 4.54% vs 3.08%</b>55세 이상 vs 25~54세</div><div>손주 간식을 고르는 조부모층이라는 예상 밖 반응층 발견</div><div class="act">5060 전용 세트를 분리한 비교 테스트 제안</div></div>
+      <div class="read-row"><div class="num"><b>릴스 76%</b>2주차 링크 클릭 1,674건 중 1,280건</div><div>클릭이 세로형 숏폼 지면에 집중됨</div><div class="act">9:16 세로형을 기본 포맷으로, 릴스 단독 지면 테스트 제안</div></div>
     </div>
     <div class="limit rv">
-      <div class="box lim"><h5><em>한계</em>전환 지표 추적의 공백</h5><p>광고 링크가 아마존 상품 상세페이지로 직행해, 클릭 이후의 최종 구매 전환(CVR)은 추적할 수 없었습니다. 이번 성과 분석은 CTR·CPC 등 유입 지표까지입니다.</p></div>
-      <div class="box"><h5><em>다음 설계 · 팀 공동</em>트래킹을 위한 경유 퍼널</h5><p>UTM·GA4·Meta Pixel을 심은 일본어 브랜드 페이지(경유지) 구축을 제안했습니다. 리스크를 나누기 위해 아마존 직행에 예산 80~90%를 유지하고, 10~20%만 경유 페이지 퍼널에 배정해 비교하는 구조로 설계했습니다.</p></div>
-      <div class="box"><h5><em>향후 개선</em>Amazon Attribution 도입</h5><p>경유 페이지와 GA4만으로는 아마존 안의 최종 결제를 추적할 수 없습니다. Amazon Attribution 태그를 붙여, Meta 유입이 상세페이지 조회(DPV) → 장바구니 담기(ATC) → 구매로 이어지는 전체 퍼널을 추적하겠습니다.</p></div>
+      <div class="box lim"><h5><em>한계</em>구매 전환 추적의 공백</h5><p>광고가 아마존 상세페이지로 직행해 클릭 이후 구매는 추적하지 못했습니다. 분석은 CTR·CPC 등 유입 지표까지입니다.</p></div>
+      <div class="box"><h5><em>개선 · 팀 공동</em>경유 페이지 퍼널</h5><p>UTM·GA4·Meta Pixel을 심은 일본어 브랜드 페이지를 제안했습니다. 아마존 직행 80~90%, 경유 페이지 10~20%로 나눠 비교하는 구조입니다.</p></div>
+      <div class="box"><h5><em>다음 과제</em>Amazon Attribution</h5><p>Meta 유입이 상세페이지 조회 → 장바구니 → 구매로 이어지는지까지 추적하는 방법을 다음 과제로 정리했습니다.</p></div>
     </div>
   </div>
 </section>
 
-<!-- EVIDENCE -->
-<section id="evidence">
-  <div class="wrap">
-    <div class="eyebrow rv">Data Evidence · 근거 자료</div>
-    <h3 class="h3 rv">모든 성과 지표는 실제 로우 데이터(Raw Data)에 기반합니다</h3>
-    <p class="lead rv">Meta 광고관리자 원본과 내보내기(Export) 데이터를 Python(pandas)으로 교차 검증하고 재집계했습니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
-    <div class="ev-grid">
-      <figure class="ev rv" id="ev-ads-t1" style="margin:0"><button type="button" data-full="../images/evidence/ev_adsmanager_t1.png" data-cap="E1 · Meta 광고관리자 · 아이엄마 타깃 세트"><img src="../images/evidence/ev_adsmanager_t1.png" alt="Meta 광고관리자 · 아이엄마 타깃 세트" loading="lazy" /></button><figcaption class="cap"><div class="id">E1</div><b>Meta 광고관리자 · 아이엄마 타깃 세트</b><span>직접 기획·제작한 아이엄마 타깃 소재 4종의 주요 성과 지표 (링크 클릭, CPC, 노출 등)</span></figcaption></figure>
-      <figure class="ev rv" id="ev-ads-t2" style="margin:0"><button type="button" data-full="../images/evidence/ev_adsmanager_t2.png" data-cap="E2 · Meta 광고관리자 · 건강 관심 여성 세트"><img src="../images/evidence/ev_adsmanager_t2.png" alt="Meta 광고관리자 · 건강 관심 여성 세트" loading="lazy" /></button><figcaption class="cap"><div class="id">E2</div><b>Meta 광고관리자 · 건강 관심 여성 세트</b><span>2대 타깃 중 건강 관심 여성 세트 성과 원본 (아이엄마 타깃과 비교용 · 팀원 제작 소재)</span></figcaption></figure>
-      <figure class="ev rv" id="ev-raw" style="margin:0"><button type="button" data-full="../images/evidence/ev_raw_sample.png" data-cap="E3 · 로우 데이터(Raw Data) 추출 원본"><img src="../images/evidence/ev_raw_sample.png" alt="로우 데이터(Raw Data) 추출 원본" loading="lazy" /></button><figcaption class="cap"><div class="id">E3</div><b>로우 데이터(Raw Data) 추출 원본</b><span>일자·성별·연령·소재별로 나뉜 691행 × 57열 Meta 광고 데이터 원본 발췌</span></figcaption></figure>
-      <figure class="ev rv" id="ev-creative" style="margin:0"><button type="button" data-full="../images/evidence/ev_creative_table.png" data-cap="E4 · 소재별 성과 재집계 및 통계적 유의성 검증"><img src="../images/evidence/ev_creative_table.png" alt="소재별 성과 재집계 및 통계적 유의성 검증" loading="lazy" /></button><figcaption class="cap"><div class="id">E4</div><b>소재별 성과 재집계 및 통계적 유의성 검증</b><span>Python(pandas)으로 재집계하고 소재 간 CTR 차이를 비율 검정</span></figcaption></figure>
-      <figure class="ev rv" id="ev-age" style="margin:0"><button type="button" data-full="../images/evidence/ev_age_gender.png" data-cap="E5 · 타깃 세그먼트별(성별·연령별) 반응률 분석"><img src="../images/evidence/ev_age_gender.png" alt="타깃 세그먼트별(성별·연령별) 반응률 분석" loading="lazy" /></button><figcaption class="cap"><div class="id">E5</div><b>타깃 세그먼트별(성별·연령별) 반응률 분석</b><span>메인 타깃(여성 87%) 적중과 새로운 고반응 타깃(55세 이상, 링크 CTR 4.54%)을 확인한 데이터</span></figcaption></figure>
-      <figure class="ev rv" id="ev-place" style="margin:0"><button type="button" data-full="../images/evidence/ev_placement.png" data-cap="E6 · 노출 지면별(Placement) 유입 기여도 분석"><img src="../images/evidence/ev_placement.png" alt="노출 지면별(Placement) 유입 기여도 분석" loading="lazy" /></button><figcaption class="cap"><div class="id">E6</div><b>노출 지면별(Placement) 유입 기여도 분석</b><span>2주차 링크 클릭 1,674건의 76%가 숏폼(릴스) 지면에서 발생했음을 보여주는 세부 데이터</span></figcaption></figure>
-      <figure class="ev rv" id="ev-v2" style="margin:0"><button type="button" data-full="../images/evidence/ev_v2_compare.png" data-cap="E7 · 원본 vs 보완판 성과 지표 교차 분석"><img src="../images/evidence/ev_v2_compare.png" alt="원본 vs 보완판 성과 지표 교차 분석" loading="lazy" /></button><figcaption class="cap"><div class="id">E7</div><b>원본 vs 보완판 성과 지표 교차 분석</b><span>보완판 투입 후 시청 유지율은 올랐지만 최종 목표 지표(링크 CTR)는 떨어졌음을 확인한 집계 데이터</span></figcaption></figure>
-    </div>
-    <p class="ev-src rv">분석 소스: Meta 성과 원본 데이터 (일·성별·연령 기준 691행, 지면·플랫폼 기준 237행) · 데이터 정합성을 위해 세팅 오류 광고 1건은 분석 모수에서 제외 · 전처리 및 집계 코드: <a href="../analysis/make_evidence.py" target="_blank" rel="noopener"><code>analysis/make_evidence.py</code></a></p>
-  </div>
-</section>
-
-<dialog class="lightbox" id="lightbox"><button class="close" type="button" aria-label="닫기">×</button><img alt="" /><p></p></dialog>
-
-<!-- BRIDGE -->
-<section id="bridge" class="glow">
-  <div class="wrap">
-    <div class="eyebrow rv">Hypothesis × Creative</div>
-    <h2 class="rv">가설 → 제작 → 숫자 → 수정,<br><span class="accent">이 순환을 두 번 돌렸습니다</span></h2>
-    <p class="rv">틀린 가설 2개가 다음 숏폼을 더 낫게 만들었습니다.</p>
-  </div>
-</section>
-
-<!-- ANUA STUDY -->
-<section id="anua" class="glow">
-  <div class="wrap">
-    <div class="eyebrow rv">Project 2 · New · Personal Case Study</div>
-    <h2 class="sec-title rv">What Makes Content Convert?</h2>
-    <p class="sec-sub rv">ANUA 글로벌 숏폼 콘텐츠 분석 및 기획 제안</p>
-    <p class="lead rv" style="max-width:760px">목적: 글로벌 소비자 관점에서 제품 소구점을 발굴하고, 콘텐츠 가설과 검증 계획을 설계합니다. 실제 집행 결과가 아닌 개인 기획안이며, 아래 가설은 콘텐츠 조사 전 단계의 가설입니다.</p>
-
-    <div class="study-step rv">
-      <div class="eyebrow">1 · Content Insight</div>
-      <h3 class="h3">무엇이 소비자의 관심을 끄는가?</h3>
-      <div class="steps" style="margin-top:0">
-        <div class="step"><div class="k">첫 3초</div><h5>제품이 필요한 이유를 전달하는가</h5><p>첫 장면에서 고민이나 질문이 먼저 나오는지, 제품이 먼저 나오는지 확인합니다.</p></div>
-        <div class="step"><div class="k">메시지</div><h5>성분 설명인가, 실제 사용 경험인가</h5><p>같은 제품이라도 어떤 요소를 앞세우는지에 따라 반응이 달라지는지 봅니다.</p></div>
-        <div class="step"><div class="k">장면</div><h5>사용 장면·텍스처·루틴·설명의 역할</h5><p>크리에이터의 설명과 실제 사용 장면이 각각 어떤 역할을 하는지 나눠 봅니다.</p></div>
-        <div class="step"><div class="k">댓글</div><h5>반복되는 질문과 구매 장벽</h5><p>댓글에서 되풀이되는 질문을 모아, 다음 콘텐츠가 먼저 답해야 할 내용을 찾습니다.</p></div>
-      </div>
-    </div>
-
-    <div class="study-step rv">
-      <div class="eyebrow">2 · Creative Hypothesis</div>
-      <h3 class="h3">제품 설명보다 소비자의 사용 맥락을 보여주면 어떨까?</h3>
-      <p class="quote" style="margin-top:0"><b>가설 (조사 전)</b> 제품의 특징을 나열하는 영상과 실제 스킨케어 루틴 안에서 제품을 사용하는 영상을 비교하면, 후자가 시청 유지율과 제품 관심을 더 높일 것이다.</p>
-      <p class="note">이 가설은 달칩샌드 경험에서 출발했습니다. 제품과 키워드를 앞으로 당긴 보완판보다 원본의 서사가 클릭을 더 만들었기 때문에, 정보 나열보다 맥락이 반응으로 이어지는지 뷰티 숏폼에서 다시 확인하려 합니다. 실제 콘텐츠를 조사한 뒤 가설을 확정합니다.</p>
-    </div>
-
-    <div class="study-step rv">
-      <div class="eyebrow">3 · Short-form Concept</div>
-      <h3 class="h3">A Product That Fits Your Routine</h3>
-      <div class="story">
-        <div class="frame"><div class="t">0–3초</div><b>Hook</b><p>타깃 소비자가 공감할 스킨케어 고민 또는 질문으로 시작</p></div>
-        <div class="frame"><div class="t">3–10초</div><b>Product Experience</b><p>제품의 실제 사용감과 루틴 속 활용 장면을 보여줌</p></div>
-        <div class="frame"><div class="t">10–20초</div><b>Reason to Believe</b><p>공식 제품 정보에 근거해 핵심 특징을 전달하고 제품 페이지로 유도</p></div>
-      </div>
-      <p class="note">기획 예시입니다. 제품의 효능이나 사용 결과를 임의로 주장하지 않고, 근거는 공식 제품 정보만 사용합니다.</p>
-    </div>
-
-    <div class="study-step rv">
-      <div class="eyebrow">4 · Test &amp; Optimize</div>
-      <h3 class="h3">성과를 어떻게 검증할 것인가?</h3>
-      <div class="read-head c2"><span>테스트 항목</span><span>확인 지표</span></div>
-      <div class="read c2">
-        <div class="read-row"><div class="num"><b>첫 장면·후킹 문구</b></div><div>초반 이탈, 시청 유지율</div></div>
-        <div class="read-row"><div class="num"><b>사용 장면·메시지</b></div><div>평균 시청 시간, 참여율</div></div>
-        <div class="read-row"><div class="num"><b>CTA·제품 연결</b></div><div>링크 클릭률, 제품 페이지 유입</div></div>
-        <div class="read-row"><div class="num"><b>구매 유도 성과</b></div><div>추적 가능한 경우 전환율·구매 성과</div></div>
-      </div>
-      <p class="quote">플랫폼과 캠페인 목표에 따라 지표를 고르고, 조회수와 구매 성과를 혼동하지 않습니다. 달칩샌드 보완판은 시청이 약 3배 늘었지만 링크 CTR은 절반으로 떨어졌습니다.</p>
-    </div>
-
-    <div class="study-step rv">
-      <div class="eyebrow">Creator Fit · 선정 기준(안)</div>
-      <h3 class="h3">크리에이터는 팔로워 수만으로 고르지 않습니다</h3>
-      <div class="steps" style="margin-top:0">
-        <div class="step"><div class="k">01</div><h5>타깃 국가</h5><p>캠페인 국가의 시청자가 실제로 모여 있는 채널인지</p></div>
-        <div class="step"><div class="k">02</div><h5>콘텐츠 스타일</h5><p>루틴·리뷰·튜토리얼 등 기획한 콘셉트와 맞는 화법인지</p></div>
-        <div class="step"><div class="k">03</div><h5>카테고리 적합성</h5><p>스킨케어 콘텐츠를 꾸준히 다뤄 왔는지</p></div>
-        <div class="step"><div class="k">04</div><h5>실제 참여 반응</h5><p>조회수보다 댓글에서 제품 질문이 나오는지</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- B2B -->
-<section id="b2b">
-  <div class="wrap two">
-    <div class="rv">
-      <div class="eyebrow">Project 3 · 실제 운영</div>
-      <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">글로벌 타깃 영문 콘텐츠<br>기획 및 반응률 분석</h2>
-      <p class="sec-sub">네이처오다 링크드인 B2B 콘텐츠 · 단독 운영</p>
-      <p>해외 바이어 발굴을 위해 파트너십 CTA를 포함한 <b>영문 게시물 9건</b>을 발행해, 누적 노출 <b>2,270회</b>, 반응 <b>60건</b>을 기록했습니다.</p>
-      <p>가장 높은 반응률(<b>4.2%</b>)은 ‘친환경 원재료(우렁이 농법)’ 스토리에서 나왔습니다. 다만 게시물별 노출 편차가 크고(74~425회) 모수가 작은 데이터의 한계를 고려해, 이를 확정적 결론 대신 <b>향후 콘텐츠 고도화를 위한 초기 가설</b>로 설정했습니다.</p>
-    </div>
-    <div class="chart rv">
-      <h5>게시물별 반응률 (반응 ÷ 노출)</h5>
-      <div id="liChart"></div>
-      <p class="note">누적 노출 2,270 · 반응 60</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTENT & CHANNEL -->
-<section id="more">
+<!-- 6 SNS -->
+<section id="sns">
   <div class="wrap">
     <div class="channel-hero">
       <div class="rv">
-        <div class="eyebrow">Project 4 · Content &amp; Channel</div>
-        <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">콘텐츠 기획부터<br>인스타그램·유튜브 채널 운영까지</h2>
-        <p class="org">천원의 아침밥 서포터즈 4기(대상) · 아이즈모바일 아이즈크루 2기 · YBM 홍보 서포터즈 · DSC 공유대학 서포터즈</p>
-        <p>통신 요금제, 어학 강의, 정부 정책 등 다양한 분야의 타깃 특성을 분석하고, 각 매체에 최적화된 콘텐츠를 직접 기획·제작·발행해 왔습니다.</p>
-        <p>대상의 니즈에 맞춰 카드뉴스, 영상, 블로그 아티클 중 가장 효과적인 포맷을 골라 채널을 운영했습니다. 천원의 아침밥 서포터즈에서는 급식 현장을 직접 취재해 만든 카드뉴스 2건이 모두 우수 콘텐츠로 뽑혀 농정원 공식 블로그 ‘미소곡간’에 실렸습니다.</p>
+        <div class="eyebrow">SNS Content · 기획 및 운영</div>
+        <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">타깃에 따라<br>콘텐츠 표현 방식을 바꿨습니다</h2>
+        <p>같은 카드뉴스라도 누가 볼지에 따라 주제를 고르는 방식, 말투, 형식을 다르게 정했습니다.</p>
+        <div class="tlist">
+          <div><b>천원의 아침밥 서포터즈 4기 · 대상</b><span><i>타깃</i>사업의 주 수요층인 자취생과 기숙사생</span><span><i>의도</i>홍보 문구를 옮기기보다 교내 급식 현장을 직접 취재해 보여 주기</span><span><i>결과</i>카드뉴스 2건 모두 우수 콘텐츠로 선정, 농정원 공식 블로그 ‘미소곡간’ 게재</span></div>
+          <div><b>목원대학교 취업 서포터즈 1~3기</b><span><i>타깃</i>취업 정책을 잘 모르는 재학생</span><span><i>의도</i>앞 기수도 가이드라인도 없던 1기, 교내 행사에서 학생들에게 고민과 관심사를 직접 묻고 그 답으로 다음 콘텐츠 기획</span><span><i>결과</i>3년간 매달 카드뉴스 제작, 학기별 교내 취업 행사 운영</span></div>
+          <div><b>아이즈크루 2기 · YBM 홍보 · DSC 공유대학</b><span><i>타깃</i>통신 요금제, 어학 강의, 공유대학 제도를 찾는 서로 다른 사람들</span><span><i>의도</i>주제마다 카드뉴스, 영상, 블로그 글 중 맞는 형식을 골라 발행</span></div>
+        </div>
         <div class="links">
           <a class="btn" href="https://instagram.com/s.bokyung98" target="_blank" rel="noopener">인스타그램 ↗</a>
           <a class="btn" href="https://blog.naver.com/urgr0226" target="_blank" rel="noopener">블로그 ↗</a>
@@ -695,34 +575,135 @@ section{position:relative;padding:120px 0}
         </div>
       </div>
       <div class="phone-duo rv" aria-label="인스타그램·유튜브 채널 화면">
-        <div class="phone back"><div class="screen"><img src="../images/channel_home.jpg" alt="유튜브 채널 홈 (달칩샌드 AI 광고 영상, 아이즈크루 퀴즈)" /></div></div>
-        <div class="phone front"><div class="screen"><img src="../images/channel_instagram.jpg" alt="인스타그램 피드 (아이즈모바일 카드뉴스)" /></div></div>
+        <div class="phone back"><div class="screen"><img src="../images/channel_home.jpg" alt="유튜브 채널 홈" /></div></div>
+        <div class="phone front"><div class="screen"><img src="../images/channel_instagram.jpg" alt="인스타그램 카드뉴스 피드" /></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NEXT -->
-<section id="next">
-  <div class="wrap">
-    <div class="eyebrow rv">Next · ANUA Global Content Marketing</div>
-    <h2 class="sec-title rv" style="font-size:clamp(28px,3.6vw,44px)">콘텐츠의 가능성을 발견하고,<br>데이터로 성장을 만듭니다</h2>
-    <div class="next-table rv">
-      <div class="next-head"><span>과거의 인사이트</span><span></span><span>My Approach</span></div>
-      <div class="next-row"><span>한일 소비자 비교로 ‘고소함 + 초코의 조화’ 메시지 도출</span><span class="arrow">→</span><span class="to"><b>1. Discover</b><br>시장과 소비자 반응을 분석해 제품의 차별화된 소구점을 발견하겠습니다.</span></div>
-      <div class="next-row"><span>서로 다른 타깃 인사이트로 캐릭터편·코미디편을 기획하고, 예상과 달리 캐릭터편이 CPC 28% 낮음</span><span class="arrow">→</span><span class="to"><b>2. Create</b><br>글로벌 소비자의 관심과 공감을 구매 행동으로 연결하는 콘텐츠를 기획하겠습니다.</span></div>
-      <div class="next-row"><span>시청은 늘고 클릭은 줄어든 보완판을 멈추고 원본 유지</span><span class="arrow">→</span><span class="to"><b>3. Optimize</b><br>콘텐츠 발행 후 성과를 분석하고, 검증된 인사이트를 다음 콘텐츠에 반영하겠습니다.</span></div>
+<!-- 7 B2B -->
+<section id="b2b" class="glow">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">Global B2B Content · 단독 운영</div>
+      <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">영문 콘텐츠 기획 및<br>해외 타깃 커뮤니케이션</h2>
+      <p class="sec-sub">네이처오다 LinkedIn B2B 콘텐츠 · 달칩샌드 프로젝트</p>
+      <p>해외 유통사와 바이어를 타깃으로, 모든 게시물을 영어로 직접 기획하고 작성했습니다. 글마다 파트너십 제안 CTA를 넣어 <b>9건</b>을 발행했고, 누적 노출 <b>2,270회</b>, 참여 <b>60건</b>을 기록했습니다.</p>
+      <p>가장 높은 반응률(<b>4.2%</b>)은 실적 발표가 아니라 원재료 이야기(유기농 우렁이 농법)에서 나왔습니다. 다만 게시물별 노출 편차가 크고(74~425회) 표본이 작아, 결론이 아니라 다음 콘텐츠를 위한 가설로 남겼습니다.</p>
     </div>
-    <p class="note rv">인플루언서 캐스팅·파트너십 관리와 틱톡 집행은 아직 직접 해 보지 않은 영역입니다.</p>
+    <div class="chart rv">
+      <h5>게시물별 반응률 (반응 ÷ 노출)</h5>
+      <div id="liChart"></div>
+      <p class="note">누적 노출 2,270 · 참여 60 · 게시물 9건</p>
+    </div>
   </div>
 </section>
 
-<!-- THANKS -->
-<section id="thanks" class="glow">
+<!-- 8-9 ANUA PROPOSAL -->
+<section id="anua">
   <div class="wrap">
-    <div class="small">BOKYUNG SONG · Global Content Marketing</div><br>
-    <h2><em>Thank you</em>감사합니다</h2>
-    <p class="contact"><a href="mailto:khodu0616@gmail.com">khodu0616@gmail.com</a></p>
+    <div class="eyebrow rv">ANUA Proposal · 개인 준비 기획안</div>
+    <h2 class="sec-title rv">ANUA 콘텐츠 분석 및<br>숏폼 기획 제안</h2>
+    <p class="disclaim rv">실제 수행 프로젝트가 아니라, 지원 직무에 맞춰 공개 자료를 바탕으로 개인적으로 준비한 제안입니다. 아래 성과는 모두 검증 전 가설입니다.</p>
+
+    <div class="study-step rv">
+      <div class="eyebrow">1 · 브랜드 분석</div>
+      <h3 class="h3">공개 자료로 본 ANUA</h3>
+      <div class="facts-grid">
+        <div><b>24억 뷰</b><span>틱톡 누적 조회수, 브랜드 콘텐츠 12만 5천 개</span></div>
+        <div><b>3억 3,800만 뷰</b><span>어성초 포어 컨트롤 클렌징 오일 관련 콘텐츠 (#anuacleansingoil)</span></div>
+        <div><b>약 80%</b><span>최근 3개월 틱톡샵 방문 고객 중 신규 고객 비율</span></div>
+        <div><b>3위</b><span>미국 아마존 클렌징·토너 부문 각각 (2025)</span></div>
+      </div>
+      <p class="note">출처: 코스모닝, ‘아누아, 틱톡 누적 조회수 24억 뷰 돌파’ · ‘더파운더즈, 2025년 매출 7천억 돌파’(2026.05)</p>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">2 · 콘텐츠 관찰</div>
+      <h3 class="h3">무엇을 강조하고, 어떻게 퍼지는가</h3>
+      <div class="read-head c2"><span>공개 자료에서 확인한 사실</span><span>저의 해석</span></div>
+      <div class="read c2">
+        <div class="read-row"><div class="num"><b>제품 이름 해시태그</b>단일 제품(클렌징 오일) 관련 콘텐츠가 3억 뷰를 넘음</div><div class="act">브랜드 계정보다 제품 이름으로 퍼지는 UGC 구조. 숏폼은 브랜드가 아니라 제품 하나를 기억하게 만들어야 한다</div></div>
+        <div class="read-row"><div class="num"><b>루틴 단위 판매</b>틱톡샵 베스트셀러가 단품이 아닌 ‘얼티밋 스킨케어 루틴 세트’, 더블 클렌징 세트 할인 프로모션 진행</div><div class="act">제품을 ‘루틴의 한 단계’로 보여 줄 때 구매 단위가 커진다</div></div>
+        <div class="read-row"><div class="num"><b>신규 고객 약 80%</b>최근 3개월 틱톡샵 방문 고객</div><div class="act">콘텐츠가 기존 팬보다 처음 보는 사람을 데려온다. 첫 3초는 ANUA를 모르는 사람 기준으로 설계해야 한다</div></div>
+      </div>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">3 · 기획안 제안</div>
+      <h3 class="h3">어성초 포어 컨트롤 클렌징 오일 숏폼 아이디어 2개</h3>
+      <div class="idea">
+        <div class="idea-h"><b>A. “지성인데 오일로 세안해도 될까?”</b><span>고민 질문형 훅</span></div>
+        <div class="story">
+          <div class="frame"><div class="t">0–3초 · Hook</div><p>지성 피부 크리에이터가 손등에 오일을 펌프하며 자막으로 질문을 던진다</p></div>
+          <div class="frame"><div class="t">3–10초 · Product Experience</div><p>마른 얼굴에 마사지한 뒤 물을 더해 헹궈 내는 과정을 클로즈업. 사용감은 크리에이터 본인의 말로</p></div>
+          <div class="frame"><div class="t">10–20초 · Reason to Believe</div><p>공식 제품 정보의 핵심 특징을 자막으로 정리하고, 2단계 클렌저로 이어지는 더블 클렌징과 제품 링크로 연결</p></div>
+        </div>
+      </div>
+      <div class="idea">
+        <div class="idea-h"><b>B. “퇴근 후, 오늘을 지우는 3단계”</b><span>루틴 POV형 훅</span></div>
+        <div class="story">
+          <div class="frame"><div class="t">0–3초 · Hook</div><p>퇴근 직후 메이크업한 얼굴의 POV 컷과 함께 “오늘 하루 지우는 시간” 자막</p></div>
+          <div class="frame"><div class="t">3–10초 · Product Experience</div><p>클렌징 오일 → 2차 세안 → 다음 스킨케어 단계로 이어지는 실제 저녁 루틴을 빠르게 컷 편집</p></div>
+          <div class="frame"><div class="t">10–20초 · Reason to Believe</div><p>루틴의 각 단계에 쓴 제품을 공식 정보 기준으로 안내하고, 단계별 제품·세트 페이지로 연결</p></div>
+        </div>
+      </div>
+      <p class="note">기획 예시입니다. 제품의 효능이나 사용 결과를 임의로 주장하지 않고, 근거는 공식 제품 정보만 사용합니다.</p>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">4 · 성과 가설</div>
+      <h3 class="h3">누구를 겨냥하고, 어떤 반응을 기대하고, 무엇으로 판단할까</h3>
+      <div class="htable">
+        <div class="hrow head"><span></span><span>타깃 (가설)</span><span>기대 반응</span><span>판단 지표</span></div>
+        <div class="hrow"><b>A. 고민 질문형</b><span>오일 클렌저를 망설이는 지성·복합성 피부 20대</span><span>피부 타입·사용법을 묻는 댓글, 저장</span><span>3초 시청 유지율, 사용법 질문 댓글 비율, 링크 클릭률</span></div>
+        <div class="hrow"><b>B. 루틴 POV형</b><span>매일 메이크업을 하는 25~34세 직장인</span><span>루틴 저장·공유, 세트 관심</span><span>완주율, 저장 수, 세트 페이지 클릭률</span></div>
+      </div>
+      <p class="quote">A와 B를 같은 조건으로 비교해 어떤 훅이 클릭으로 이어지는지 확인하겠습니다. 달칩샌드 보완판에서 시청은 약 3배 늘었는데 링크 CTR은 절반이 됐던 경험 때문에, 조회수와 클릭·구매 지표를 따로 판단합니다.</p>
+      <div class="cfit">
+        <b>크리에이터 선정 기준(안)</b>
+        <span>팔로워 수보다 ① 타깃 국가 시청자 비중 ② 기획 콘셉트와 맞는 화법 ③ 스킨케어 콘텐츠를 꾸준히 다뤄 왔는지 ④ 댓글에서 제품 질문이 나오는지를 봅니다.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPENDIX: EVIDENCE -->
+<section id="evidence" class="glow">
+  <div class="wrap">
+    <div class="eyebrow rv">Appendix · Data Evidence</div>
+    <h3 class="h3 rv">달칩샌드 성과 지표의 원본 데이터</h3>
+    <p class="lead rv">Meta 광고관리자 원본과 내보내기 데이터를 Python(pandas)으로 교차 검증하고 재집계했습니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+    <div class="ev-grid">
+      <figure class="ev rv" id="ev-ads-t1" style="margin:0"><button type="button" data-full="../images/evidence/ev_adsmanager_t1.png" data-cap="E1 · Meta 광고관리자 · 아이엄마 타깃 세트"><img src="../images/evidence/ev_adsmanager_t1.png" alt="Meta 광고관리자 · 아이엄마 타깃 세트" loading="lazy" /></button><figcaption class="cap"><div class="id">E1</div><b>Meta 광고관리자 · 아이엄마 타깃 세트</b><span>직접 기획·제작한 아이엄마 타깃 소재의 주요 성과 지표</span></figcaption></figure>
+      <figure class="ev rv" id="ev-ads-t2" style="margin:0"><button type="button" data-full="../images/evidence/ev_adsmanager_t2.png" data-cap="E2 · Meta 광고관리자 · 건강 관심 여성 세트"><img src="../images/evidence/ev_adsmanager_t2.png" alt="Meta 광고관리자 · 건강 관심 여성 세트" loading="lazy" /></button><figcaption class="cap"><div class="id">E2</div><b>Meta 광고관리자 · 건강 관심 여성 세트</b><span>비교용 · 팀원 제작 소재</span></figcaption></figure>
+      <figure class="ev rv" id="ev-raw" style="margin:0"><button type="button" data-full="../images/evidence/ev_raw_sample.png" data-cap="E3 · 로우 데이터 추출 원본"><img src="../images/evidence/ev_raw_sample.png" alt="로우 데이터 추출 원본" loading="lazy" /></button><figcaption class="cap"><div class="id">E3</div><b>로우 데이터 추출 원본</b><span>일자·성별·연령·소재별 691행 × 57열</span></figcaption></figure>
+      <figure class="ev rv" id="ev-creative" style="margin:0"><button type="button" data-full="../images/evidence/ev_creative_table.png" data-cap="E4 · 소재별 성과 재집계 및 통계적 유의성 검증"><img src="../images/evidence/ev_creative_table.png" alt="소재별 성과 재집계" loading="lazy" /></button><figcaption class="cap"><div class="id">E4</div><b>소재별 재집계 및 비율 검정</b><span>소재 간 CTR 차이 검정 (p&lt;0.001)</span></figcaption></figure>
+      <figure class="ev rv" id="ev-age" style="margin:0"><button type="button" data-full="../images/evidence/ev_age_gender.png" data-cap="E5 · 성별·연령별 반응률 분석"><img src="../images/evidence/ev_age_gender.png" alt="성별·연령별 반응률 분석" loading="lazy" /></button><figcaption class="cap"><div class="id">E5</div><b>성별·연령별 반응률</b><span>여성 87%, 55세 이상 링크 CTR 4.54%</span></figcaption></figure>
+      <figure class="ev rv" id="ev-place" style="margin:0"><button type="button" data-full="../images/evidence/ev_placement.png" data-cap="E6 · 노출 지면별 클릭 기여도 분석"><img src="../images/evidence/ev_placement.png" alt="노출 지면별 클릭 기여도" loading="lazy" /></button><figcaption class="cap"><div class="id">E6</div><b>지면별 클릭 기여도</b><span>2주차 링크 클릭의 76%가 릴스 지면</span></figcaption></figure>
+      <figure class="ev rv" id="ev-v2" style="margin:0"><button type="button" data-full="../images/evidence/ev_v2_compare.png" data-cap="E7 · 원본 vs 보완판 교차 분석"><img src="../images/evidence/ev_v2_compare.png" alt="원본 vs 보완판 교차 분석" loading="lazy" /></button><figcaption class="cap"><div class="id">E7</div><b>원본 vs 보완판</b><span>시청 유지율은 오르고 링크 CTR은 떨어진 기록</span></figcaption></figure>
+      <figure class="ev rv" style="margin:0"><button type="button" data-full="../images/ads_table.png" data-cap="Meta 광고관리자 소재별 성과 표"><img src="../images/ads_table.png" alt="Meta 광고관리자 소재별 성과 표" loading="lazy" /></button><figcaption class="cap"><div class="id">E8</div><b>소재별 성과 표</b><span>예산은 광고 세트 단위</span></figcaption></figure>
+    </div>
+    <p class="ev-src rv">분석 소스: Meta 성과 원본 데이터 (일·성별·연령 기준 691행, 지면·플랫폼 기준 237행) · 세팅 오류 광고 1건은 분석 모수에서 제외 · 집계 코드: <a href="../analysis/make_evidence.py" target="_blank" rel="noopener"><code>analysis/make_evidence.py</code></a></p>
+  </div>
+</section>
+
+<dialog class="lightbox" id="lightbox"><button class="close" type="button" aria-label="닫기">×</button><img alt="" /><p></p></dialog>
+
+<!-- 10 CLOSING -->
+<section id="thanks">
+  <div class="wrap">
+    <h2 class="closing-h">글로벌 소비자를 이해하고,<br>콘텐츠로 연결하겠습니다.</h2>
+    <p class="closing-sub">ANUA 글로벌 콘텐츠 마케팅 채용전환형 인턴 지원 · 송보경</p>
+    <ul class="contact-list">
+      <li><span>Email</span><a href="mailto:khodu0616@gmail.com">khodu0616@gmail.com</a></li>
+      <li><span>Portfolio</span><a href="https://urgr1111.github.io/performance-marketing-portfolio/anua/">urgr1111.github.io/performance-marketing-portfolio/anua</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jay-bokyung-song-457332276/" target="_blank" rel="noopener">linkedin.com/in/jay-bokyung-song</a></li>
+      <li><span>Instagram</span><a href="https://instagram.com/s.bokyung98" target="_blank" rel="noopener">instagram.com/s.bokyung98</a></li>
+      <li><span>YouTube</span><a href="https://www.youtube.com/@bokyung30" target="_blank" rel="noopener">youtube.com/@bokyung30</a></li>
+    </ul>
+    <p class="thanks-word"><em>Thank you</em></p>
   </div>
 </section>
 
@@ -773,7 +754,7 @@ section{position:relative;padding:120px 0}
   links.addEventListener('click',function(e){if(e.target.tagName==='A')links.classList.remove('open')});
 
   var navA=[].slice.call(links.querySelectorAll('a'));
-  var secMap={evidence:'evidence',about:'about',dalchip:'dalchip',research:'dalchip',creative:'dalchip',test:'dalchip',audience:'dalchip',result:'dalchip',anua:'anua',b2b:'b2b',more:'more',next:'next'};
+  var secMap={about:'about',dalchip:'dalchip',research:'dalchip',creative:'dalchip',test:'dalchip',sns:'sns',b2b:'b2b',anua:'anua',evidence:'evidence',thanks:'thanks'};
   function fillBars(root){[].forEach.call(root.querySelectorAll('.fill[data-w]'),function(f){f.style.width=f.getAttribute('data-w')+'%'})}
   function revealAll(){fillBars(document)}
   addEventListener('beforeprint',revealAll);
