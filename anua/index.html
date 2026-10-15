@@ -330,6 +330,18 @@ section{position:relative;padding:120px 0}
 .thanks-word em{font-style:normal}
 @media (max-width:980px){.facts-grid{grid-template-columns:1fr 1fr}.hrow{grid-template-columns:1fr 1fr}.hrow.head{display:none}.hrow b{grid-column:1/-1}}
 @media (max-width:720px){.facts-grid{grid-template-columns:1fr}.hrow{grid-template-columns:1fr;gap:6px}.contact-list li{grid-template-columns:1fr;gap:2px}}
+
+.ig-case{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:30px}
+.ig-k{font-size:13px;font-weight:700;color:var(--accent-d);margin-bottom:6px}
+.ig-grid{margin:0}
+.ig-grid img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.ig-grid figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.brief3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.brief3 div,.vars div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.brief3 b,.vars b{display:block;font-size:16px;margin-bottom:6px;color:var(--accent-d)}
+.brief3 span,.vars span{font-size:14.5px;color:var(--ink2)}
+.vars{display:grid;grid-template-columns:1fr 1.4fr;gap:14px}
+@media (max-width:980px){.ig-case{grid-template-columns:1fr}.brief3{grid-template-columns:1fr}.vars{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -379,12 +391,7 @@ section{position:relative;padding:120px 0}
         <h2>About <span class="accent">me</span></h2>
         <p>글로벌 소비자를 이해하고, 콘텐츠로 연결하는 마케터 송보경입니다.</p>
       </div>
-      <div class="can rv">
-        <div class="can-item"><div class="n">1</div><div><b>글로벌 시장·소비자 분석</b><span>달칩샌드 일본 진출에서 한일 소비자 만족도와 라쿠텐 리뷰를 비교하고, 일본인 유학생 3명을 인터뷰해 타깃과 제품 소구점을 정했습니다.</span></div></div>
-        <div class="can-item"><div class="n">2</div><div><b>숏폼 영상 및 SNS 콘텐츠 기획·제작</b><span>일본 아이엄마 타깃 숏폼 광고 3편을 레퍼런스 설정부터 AI 제작, 일본어 더빙까지 직접 만들었습니다. 서포터즈 카드뉴스로 천원의 아침밥 대상을 받았습니다.</span></div></div>
-        <div class="can-item"><div class="n">3</div><div><b>채널 운영 및 광고 성과 분석</b><span>Meta 광고를 2주간 집행하며 소재·연령·지면별 성과를 나눠 예산을 옮겼고, 영문 링크드인 B2B 콘텐츠 9건을 혼자 운영했습니다.</span></div></div>
-      </div>
-      <div class="about-cols rv" style="margin-top:40px">
+      <div class="about-cols rv">
         <div class="blk">
           <h4>Experience</h4>
           <ul class="rows">
@@ -558,11 +565,23 @@ section{position:relative;padding:120px 0}
 <!-- 6 SNS -->
 <section id="sns">
   <div class="wrap">
-    <div class="channel-hero">
+    <div class="eyebrow rv">SNS Content · 기획 및 운영</div>
+    <h2 class="sec-title rv" style="font-size:clamp(28px,3.6vw,44px)">타깃에 따라<br>콘텐츠 표현 방식을 바꿨습니다</h2>
+    <p class="rv" style="max-width:720px">일본 직장인에게는 캐릭터의 일상으로, 국내 대학생에게는 현장 취재와 정책 카드뉴스로. 누가 볼지에 따라 주제, 말투, 형식을 다르게 정했습니다.</p>
+    <div class="ig-case rv">
+      <div>
+        <div class="ig-k">일본 타깃 · 캐릭터 인스타그램</div>
+        <h3 class="h3" style="margin-bottom:12px">@dalchibi_mainichi</h3>
+        <div class="tlist" style="margin-top:0">
+          <div><span><i>타깃</i>일본의 직장인 (게시물 주제 기준)</span><span><i>의도</i>달칩샌드 프로모션 기획에서 짚은 ‘사도 이름이 기억에 남지 않는다’는 문제를 풀기 위해, 제품 광고 대신 캐릭터 ‘달치비’의 일상으로 이름을 먼저 기억하게 만들기</span><span><i>형식</i>생성형 AI로 만든 인형 같은 달치비에 일본어 문구를 얹은 공감형 이미지와 릴스. 출근하기 싫은 아침, 미뤄서 불어난 업무, 퇴근 후 운동 다짐과 곧바로 잠드는 밤처럼 직장인의 하루를 소재로 삼았습니다.</span><span><i>결과</i>2026년 5월 게시물 11개(사진 10 · 릴스 1), 팔로워 335명</span></div>
+        </div>
+        <div class="links" style="margin-top:14px"><a class="btn" href="https://www.instagram.com/dalchibi_mainichi/" target="_blank" rel="noopener">@dalchibi_mainichi ↗</a></div>
+      </div>
+      <figure class="ig-grid"><img src="../images/dalchibi_grid.jpg" alt="@dalchibi_mainichi 게시물 화면" loading="lazy" /><figcaption>게시 이미지는 모두 생성형 AI로 제작했다고 계정 소개에 밝혀 두었습니다.</figcaption></figure>
+    </div>
+    <div class="channel-hero" style="margin-top:56px">
       <div class="rv">
-        <div class="eyebrow">SNS Content · 기획 및 운영</div>
-        <h2 class="sec-title" style="font-size:clamp(28px,3.6vw,44px)">타깃에 따라<br>콘텐츠 표현 방식을 바꿨습니다</h2>
-        <p>같은 카드뉴스라도 누가 볼지에 따라 주제를 고르는 방식, 말투, 형식을 다르게 정했습니다.</p>
+        <div class="ig-k">국내 타깃 · 서포터즈 콘텐츠</div>
         <div class="tlist">
           <div><b>천원의 아침밥 서포터즈 4기 · 대상</b><span><i>타깃</i>사업의 주 수요층인 자취생과 기숙사생</span><span><i>의도</i>홍보 문구를 옮기기보다 교내 급식 현장을 직접 취재해 보여 주기</span><span><i>결과</i>카드뉴스 2건 모두 우수 콘텐츠로 선정, 농정원 공식 블로그 ‘미소곡간’ 게재</span></div>
           <div><b>목원대학교 취업 서포터즈 1~3기</b><span><i>타깃</i>취업 정책을 잘 모르는 재학생</span><span><i>의도</i>앞 기수도 가이드라인도 없던 1기, 교내 행사에서 학생들에게 고민과 관심사를 직접 묻고 그 답으로 다음 콘텐츠 기획</span><span><i>결과</i>3년간 매달 카드뉴스 제작, 학기별 교내 취업 행사 운영</span></div>
@@ -605,18 +624,24 @@ section{position:relative;padding:120px 0}
   <div class="wrap">
     <div class="eyebrow rv">ANUA Proposal · 개인 준비 기획안</div>
     <h2 class="sec-title rv">ANUA 콘텐츠 분석 및<br>숏폼 기획 제안</h2>
-    <p class="disclaim rv">실제 수행 프로젝트가 아니라, 지원 직무에 맞춰 공개 자료를 바탕으로 개인적으로 준비한 제안입니다. 아래 성과는 모두 검증 전 가설입니다.</p>
+    <p class="disclaim rv">실제 수행 프로젝트가 아니라, 지원 직무에 맞춰 공개 자료를 바탕으로 개인적으로 준비한 제안입니다. 타깃과 성과는 모두 검증 전 가설입니다.</p>
 
     <div class="study-step rv">
       <div class="eyebrow">1 · 브랜드 분석</div>
-      <h3 class="h3">공개 자료로 본 ANUA</h3>
+      <h3 class="h3">공개 자료로 본 ANUA, 그리고 클렌징 오일</h3>
       <div class="facts-grid">
         <div><b>24억 뷰</b><span>틱톡 누적 조회수, 브랜드 콘텐츠 12만 5천 개</span></div>
         <div><b>3억 3,800만 뷰</b><span>어성초 포어 컨트롤 클렌징 오일 관련 콘텐츠 (#anuacleansingoil)</span></div>
         <div><b>약 80%</b><span>최근 3개월 틱톡샵 방문 고객 중 신규 고객 비율</span></div>
         <div><b>3위</b><span>미국 아마존 클렌징·토너 부문 각각 (2025)</span></div>
       </div>
-      <p class="note">출처: 코스모닝, ‘아누아, 틱톡 누적 조회수 24억 뷰 돌파’ · ‘더파운더즈, 2025년 매출 7천억 돌파’(2026.05)</p>
+      <div class="facts-grid" style="margin-top:14px">
+        <div><b>4.7점</b><span>미국 공식몰 클렌징 오일 평점, 리뷰 683개</span></div>
+        <div><b>97%</b><span>공식몰 리뷰어 중 추천 비율</span></div>
+        <div><b>5단계</b><span>공식 사용법: 2~3펌프 → 마른 얼굴 마사지 → 물로 유화 → 헹굼 → 2차 세안</span></div>
+        <div><b>루틴 짝꿍</b><span>공식몰 ‘루틴 완성’ 첫 추천은 어성초 퀘르세티놀 딥 클렌징 폼</span></div>
+      </div>
+      <p class="note">출처: 코스모닝 ‘아누아, 틱톡 누적 조회수 24억 뷰 돌파’ · ‘더파운더즈, 2025년 매출 7천억 돌파’(2026.05) · anua.com 제품 페이지(2026.10 확인)</p>
     </div>
 
     <div class="study-step rv">
@@ -624,47 +649,74 @@ section{position:relative;padding:120px 0}
       <h3 class="h3">무엇을 강조하고, 어떻게 퍼지는가</h3>
       <div class="read-head c2"><span>공개 자료에서 확인한 사실</span><span>저의 해석</span></div>
       <div class="read c2">
-        <div class="read-row"><div class="num"><b>제품 이름 해시태그</b>단일 제품(클렌징 오일) 관련 콘텐츠가 3억 뷰를 넘음</div><div class="act">브랜드 계정보다 제품 이름으로 퍼지는 UGC 구조. 숏폼은 브랜드가 아니라 제품 하나를 기억하게 만들어야 한다</div></div>
-        <div class="read-row"><div class="num"><b>루틴 단위 판매</b>틱톡샵 베스트셀러가 단품이 아닌 ‘얼티밋 스킨케어 루틴 세트’, 더블 클렌징 세트 할인 프로모션 진행</div><div class="act">제품을 ‘루틴의 한 단계’로 보여 줄 때 구매 단위가 커진다</div></div>
-        <div class="read-row"><div class="num"><b>신규 고객 약 80%</b>최근 3개월 틱톡샵 방문 고객</div><div class="act">콘텐츠가 기존 팬보다 처음 보는 사람을 데려온다. 첫 3초는 ANUA를 모르는 사람 기준으로 설계해야 한다</div></div>
+        <div class="read-row"><div class="num"><b>제품 이름 해시태그</b>단일 제품(클렌징 오일) 관련 콘텐츠가 3억 뷰를 넘음</div><div class="act">브랜드 계정보다 제품 이름으로 퍼지는 UGC 구조. 숏폼은 제품 하나를 기억하게 만들어야 한다</div></div>
+        <div class="read-row"><div class="num"><b>루틴 단위 판매</b>틱톡샵 베스트셀러가 ‘얼티밋 스킨케어 루틴 세트’, 더블 클렌징 세트 할인 진행, 공식몰도 다음 단계 제품을 함께 추천</div><div class="act">제품을 ‘루틴의 한 단계’로 보여 줄 때 구매 단위가 커진다</div></div>
+        <div class="read-row"><div class="num"><b>사용 과정이 곧 장면</b>공식 사용법이 마사지 → 물로 유화 → 헹굼의 시각적 변화로 이뤄짐</div><div class="act">효능을 말로 설명하기보다, 메이크업이 녹아 헹궈지는 장면이 ‘믿을 이유’를 대신한다</div></div>
+        <div class="read-row"><div class="num"><b>리뷰 속 관심사</b>코 피지에 대한 걱정, 기름진 잔여감이 남는지, 제형의 묽기를 언급하는 리뷰</div><div class="act">오일 클렌저의 구매 장벽은 ‘번들거림’에 대한 걱정. 첫 3초는 이 걱정을 질문으로 꺼낼 수 있다</div></div>
+        <div class="read-row"><div class="num"><b>신규 고객 약 80%</b>최근 3개월 틱톡샵 방문 고객</div><div class="act">콘텐츠가 처음 보는 사람을 데려온다. 첫 3초는 ANUA를 모르는 사람 기준으로 설계해야 한다</div></div>
       </div>
     </div>
 
     <div class="study-step rv">
-      <div class="eyebrow">3 · 기획안 제안</div>
-      <h3 class="h3">어성초 포어 컨트롤 클렌징 오일 숏폼 아이디어 2개</h3>
-      <div class="idea">
-        <div class="idea-h"><b>A. “지성인데 오일로 세안해도 될까?”</b><span>고민 질문형 훅</span></div>
-        <div class="story">
-          <div class="frame"><div class="t">0–3초 · Hook</div><p>지성 피부 크리에이터가 손등에 오일을 펌프하며 자막으로 질문을 던진다</p></div>
-          <div class="frame"><div class="t">3–10초 · Product Experience</div><p>마른 얼굴에 마사지한 뒤 물을 더해 헹궈 내는 과정을 클로즈업. 사용감은 크리에이터 본인의 말로</p></div>
-          <div class="frame"><div class="t">10–20초 · Reason to Believe</div><p>공식 제품 정보의 핵심 특징을 자막으로 정리하고, 2단계 클렌저로 이어지는 더블 클렌징과 제품 링크로 연결</p></div>
-        </div>
+      <div class="eyebrow">3 · 타깃과 메시지 (가설)</div>
+      <h3 class="h3">같은 제품, 서로 다른 두 사람의 걱정</h3>
+      <div class="steps" style="margin-top:0">
+        <div class="step"><div class="k">아이디어 A의 타깃</div><h5>오일 세안이 처음인 지성·복합성 피부 20대</h5><p><b>걱정</b> 오일을 얼굴에 바르면 더 번들거리지 않을까<br><b>보여 줄 것</b> 물을 만나 유화되고 남김없이 헹궈지는 과정<br><b>메시지</b> 오일이지만 개운하게 끝나는 첫 단계</p></div>
+        <div class="step"><div class="k">아이디어 B의 타깃</div><h5>매일 선크림·메이크업을 하는 25~34세 직장인</h5><p><b>걱정</b> 퇴근 후 지우는 과정이 길고 귀찮다<br><b>보여 줄 것</b> 오일에서 2차 세안까지 이어지는 짧은 저녁 루틴<br><b>메시지</b> 하루를 마무리하는 루틴의 시작</p></div>
       </div>
-      <div class="idea">
-        <div class="idea-h"><b>B. “퇴근 후, 오늘을 지우는 3단계”</b><span>루틴 POV형 훅</span></div>
-        <div class="story">
-          <div class="frame"><div class="t">0–3초 · Hook</div><p>퇴근 직후 메이크업한 얼굴의 POV 컷과 함께 “오늘 하루 지우는 시간” 자막</p></div>
-          <div class="frame"><div class="t">3–10초 · Product Experience</div><p>클렌징 오일 → 2차 세안 → 다음 스킨케어 단계로 이어지는 실제 저녁 루틴을 빠르게 컷 편집</p></div>
-          <div class="frame"><div class="t">10–20초 · Reason to Believe</div><p>루틴의 각 단계에 쓴 제품을 공식 정보 기준으로 안내하고, 단계별 제품·세트 페이지로 연결</p></div>
-        </div>
-      </div>
-      <p class="note">기획 예시입니다. 제품의 효능이나 사용 결과를 임의로 주장하지 않고, 근거는 공식 제품 정보만 사용합니다.</p>
     </div>
 
     <div class="study-step rv">
-      <div class="eyebrow">4 · 성과 가설</div>
-      <h3 class="h3">누구를 겨냥하고, 어떤 반응을 기대하고, 무엇으로 판단할까</h3>
-      <div class="htable">
-        <div class="hrow head"><span></span><span>타깃 (가설)</span><span>기대 반응</span><span>판단 지표</span></div>
-        <div class="hrow"><b>A. 고민 질문형</b><span>오일 클렌저를 망설이는 지성·복합성 피부 20대</span><span>피부 타입·사용법을 묻는 댓글, 저장</span><span>3초 시청 유지율, 사용법 질문 댓글 비율, 링크 클릭률</span></div>
-        <div class="hrow"><b>B. 루틴 POV형</b><span>매일 메이크업을 하는 25~34세 직장인</span><span>루틴 저장·공유, 세트 관심</span><span>완주율, 저장 수, 세트 페이지 클릭률</span></div>
+      <div class="eyebrow">4 · 숏폼 기획안</div>
+      <h3 class="h3">어성초 포어 컨트롤 클렌징 오일 숏폼 2편</h3>
+      <div class="idea">
+        <div class="idea-h"><b>A. “Oily skin + cleansing oil?”</b><span>고민 질문형 훅 · 20초</span></div>
+        <div class="story">
+          <div class="frame"><div class="t">0–3초 · Hook</div><p>지성 피부 크리에이터가 오일 병을 들고 카메라를 본다. 자막 “Oily skin + cleansing oil?”</p></div>
+          <div class="frame"><div class="t">3–12초 · Product Experience</div><p>2~3펌프 → 마른 얼굴에 원을 그리며 마사지 → 물을 더해 하얗게 유화되는 순간을 클로즈업 → 헹굼</p></div>
+          <div class="frame"><div class="t">12–20초 · Reason to Believe</div><p>공식 표기만 자막으로: 메이크업·피지·선크림 한 번에, 번들거림 없는 마무리, Non-comedogenic → “Step 2” 폼 → 링크</p></div>
+        </div>
       </div>
-      <p class="quote">A와 B를 같은 조건으로 비교해 어떤 훅이 클릭으로 이어지는지 확인하겠습니다. 달칩샌드 보완판에서 시청은 약 3배 늘었는데 링크 CTR은 절반이 됐던 경험 때문에, 조회수와 클릭·구매 지표를 따로 판단합니다.</p>
+      <div class="idea">
+        <div class="idea-h"><b>B. “POV: washing off a 12-hour day”</b><span>루틴 POV형 훅 · 20초</span></div>
+        <div class="story">
+          <div class="frame"><div class="t">0–3초 · Hook</div><p>퇴근 직후 현관에서 거울을 보는 1인칭 컷. 자막 “POV: washing off a 12-hour day”</p></div>
+          <div class="frame"><div class="t">3–12초 · Product Experience</div><p>선크림·메이크업 위로 오일 마사지 → 유화 → 폼으로 2차 세안 → 토너까지 빠른 컷 편집</p></div>
+          <div class="frame"><div class="t">12–20초 · Reason to Believe</div><p>루틴 단계별 제품명을 화면에 표시하고, 더블 클렌징 세트 페이지로 연결</p></div>
+        </div>
+      </div>
+      <p class="note">자막과 근거는 anua.com 공식 제품 정보에 있는 표현만 사용합니다. 효능을 단정하거나 임상 수치를 임의로 인용하지 않습니다.</p>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">5 · 크리에이터 브리프</div>
+      <h3 class="h3">정해 둘 것과 맡길 것을 나눕니다</h3>
+      <div class="brief3">
+        <div><b>꼭 넣을 장면</b><span>마른 얼굴 마사지, 물을 만나 유화되는 순간, 2차 세안으로 넘어가는 컷. 클릭을 만드는 장면이라 고정합니다.</span></div>
+        <div><b>크리에이터에게 맡길 것</b><span>말투, 배경, 하루의 맥락, 사용감 표현. 크리에이터 본인의 말이어야 광고처럼 보이지 않습니다.</span></div>
+        <div><b>하지 않을 것</b><span>공식 정보에 없는 효능 단정, 과장된 전후 비교, 임상 수치의 임의 인용.</span></div>
+      </div>
       <div class="cfit">
         <b>크리에이터 선정 기준(안)</b>
         <span>팔로워 수보다 ① 타깃 국가 시청자 비중 ② 기획 콘셉트와 맞는 화법 ③ 스킨케어 콘텐츠를 꾸준히 다뤄 왔는지 ④ 댓글에서 제품 질문이 나오는지를 봅니다.</span>
       </div>
+    </div>
+
+    <div class="study-step rv">
+      <div class="eyebrow">6 · 테스트 설계와 판단 기준</div>
+      <h3 class="h3">훅 하나만 바꾸고, 나머지는 고정합니다</h3>
+      <div class="vars">
+        <div><b>바꾸는 것</b><span>첫 3초의 훅 유형 (A 고민 질문형 vs B 루틴 POV형)</span></div>
+        <div><b>고정하는 것</b><span>제품, 길이 20초, 9:16, 같은 계열의 크리에이터, 게시 기간, CTA와 연결 페이지</span></div>
+      </div>
+      <div class="htable" style="margin-top:16px">
+        <div class="hrow head"><span>가설</span><span>예상</span><span>반증 조건</span><span>판단 지표</span></div>
+        <div class="hrow"><b>1. 첫 3초</b><span>걱정을 질문으로 꺼낸 A가 초반 이탈이 적다</span><span>B의 3초 유지율이 같거나 높으면</span><span>3초 시청 유지율</span></div>
+        <div class="hrow"><b>2. 끝까지 보기</b><span>하루의 흐름이 있는 B가 완주와 저장이 많다</span><span>A의 완주율·저장이 같거나 높으면</span><span>완주율, 저장 수</span></div>
+        <div class="hrow"><b>3. 클릭</b><span>세트로 이어지는 B가 링크 클릭률이 높다</span><span>A의 링크 클릭률이 같거나 높으면</span><span>링크 클릭률, 세트 페이지 유입</span></div>
+        <div class="hrow"><b>4. 역할 분담</b><span>A는 새 시청자 유입, B는 구매 고려로 역할이 나뉜다</span><span>한 편이 모든 지표에서 앞서면</span><span>신규 시청자 비율, 사용법 질문 댓글 비율</span></div>
+      </div>
+      <p class="quote">조회수와 클릭·구매 지표를 따로 판단합니다. 달칩샌드 보완판은 시청이 약 3배 늘었지만 링크 CTR은 절반이 됐습니다. 그래서 이긴 훅은 다음 크리에이터 브리프에 반영하고, 진 훅도 시청 지표에서 강했다면 상단 퍼널용으로 따로 남깁니다.</p>
     </div>
   </div>
 </section>
